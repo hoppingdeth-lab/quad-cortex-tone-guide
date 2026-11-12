@@ -4,7 +4,7 @@ artist: "Limp Bizkit"
 album: "Chocolate Starfish and the Hot Dog Flavored Water (2000)"
 description: "Wes Borland's distinctive warped clean guitar and crushing nu-metal rhythm tone, inspired by his documented effects and amplifier choices."
 tuning: "C# Standard (C#-F#-B-E-G#-C#)"
-guitar: "Six-string or seven-string guitar with a bridge humbucker, tuned to C# standard across six strings"
+guitar: "Six-string guitar with a bridge humbucker, tuned to C# standard across six strings"
 playing_style: "Precise clean picking, experimental modulation, heavy palm-muted rhythms and aggressive chord accents"
 tone_type: "High Gain"
 draft: false
