@@ -7,7 +7,7 @@ tuning: "Standard (E-A-D-G-B-E)"
 guitar: "Gibson Flying V-style or other humbucker guitar; bridge pickup for riffs, neck pickup for quieter passages"
 playing_style: "Fast two-handed tapping, aggressive shuffle riffing, palm muting, legato, harmonics and wide controlled vibrato"
 tone_type: "Crunch"
-draft: true
+draft: false
 
 # SIGNAL CHAIN
 # The Plexi and cabinet are the essential components.
