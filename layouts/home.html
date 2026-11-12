@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quad Cortex Tone Guide</title>
+  <!-- Website typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+{{ partial "header.html" . }}
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="eyebrow">Quad Cortex Tone Recipes</div>
+
+      <h1>Build the sounds.<br>Build the chain.</h1>
+
+      <p>
+        Song-inspired Quad Cortex signal chains, practical
+        amp settings and step-by-step guides to help you
+        discover great guitar tones.
+      </p>
+
+      <a href="/songs/" class="button">Explore Signal Chains</a>
+    </section>
+
+
+<section id="recipes">
+
+  <div class="eyebrow">
+    Explore the Sounds
+  </div>
+
+  <h2>Featured Tone Recipes</h2>
+
+  <div class="recipe-grid">
+
+    {{ range first 2 (where site.RegularPages "Section" "songs") }}
+
+    <a class="recipe-card" href="{{ .RelPermalink }}">
+
+      <div class="recipe-card-artist">
+        {{ .Params.artist }}
+      </div>
+
+      <h3>{{ .Title }}</h3>
+
+      <p>{{ .Params.description }}</p>
+
+      <div class="recipe-card-footer">
+
+        <span>{{ len .Params.chain }} BLOCKS</span>
+
+        <span class="recipe-card-arrow">&rarr;</span>
+
+      </div>
+
+    </a>
+
+    {{ end }}
+
+  </div>
+
+  <a href="/songs/" class="button">
+    View All Signal Chains
+  </a>
+
+</section>
+
+    <section class="card">
+      <div class="eyebrow">Coming soon</div>
+      <h2>The Complete Quad Cortex Tone Guide</h2>
+      <p>
+        A downloadable collection of song-inspired signal
+        chains, detailed settings and practical tone-building advice.
+      </p>
+    </section>
+
+  </main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>

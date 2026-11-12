@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Signal Chain Library | Quad Cortex Tone Guide</title>
+<!-- Website typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/library-filters.js" defer></script>
+</head>
+
+<body>
+
+{{ partial "header.html" . }}
+
+<main class="container">
+
+  <section class="hero library-hero">
+    <div class="eyebrow">Explore the Sounds</div>
+
+    <h1>Signal Chain Library</h1>
+
+    <p>
+      Discover song-inspired Quad Cortex signal chains,
+      practical amp settings and step-by-step
+      tone-building guides.
+    </p>
+  </section>
+
+  <!-- Search and filtering -->
+  <section class="library-filters">
+
+    <div class="eyebrow">Find Your Next Tone</div>
+
+    <div class="filter-controls">
+
+      <div class="filter-search">
+        <label for="recipe-search">Search recipes</label>
+        <input
+          type="search"
+          id="recipe-search"
+          placeholder="Search songs or artists..."
+          autocomplete="off">
+      </div>
+
+      <div class="filter-select">
+        <label for="tone-filter">Tone type</label>
+        <select id="tone-filter">
+          <option value="">All tones</option>
+        </select>
+      </div>
+
+      <div class="filter-select">
+        <label for="tuning-filter">Tuning</label>
+        <select id="tuning-filter">
+          <option value="">All tunings</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="filter-footer">
+      <span id="recipe-count" aria-live="polite">
+        Showing all recipes
+      </span>
+
+      <button type="button" id="clear-filters">
+        Clear filters
+      </button>
+    </div>
+
+  </section>
+
+  <!-- Recipe library -->
+  <section class="library-section">
+
+    <div class="eyebrow">Available Recipes</div>
+
+    <h2>Explore the Library</h2>
+
+    <div class="recipe-grid" id="recipe-grid">
+
+      {{ range .Pages.ByTitle }}
+
+      <a
+        class="recipe-card"
+        href="{{ .RelPermalink }}"
+        data-search="{{ .Title }} {{ .Params.artist }}"
+        data-tone="{{ .Params.tone_type }}"
+        data-tuning="{{ .Params.tuning }}">
+
+        <div class="recipe-card-artist">
+          {{ .Params.artist }}
+        </div>
+
+        <h3>{{ .Title }}</h3>
+
+        <p>{{ .Params.description }}</p>
+
+        <div class="recipe-card-tags">
+          {{ with .Params.tone_type }}
+          <span>{{ . }}</span>
+          {{ end }}
+
+          {{ with .Params.tuning }}
+          <span>{{ . }}</span>
+          {{ end }}
+        </div>
+
+        <div class="recipe-card-footer">
+          <span>{{ len .Params.chain }} BLOCKS</span>
+          <span class="recipe-card-arrow">&rarr;</span>
+        </div>
+
+      </a>
+
+      {{ end }}
+
+    </div>
+
+    <p id="no-results" hidden>
+      No recipes match your search.
+      Try changing or clearing your filters.
+    </p>
+
+  </section>
+
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>

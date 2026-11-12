@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>{{ .Title }} | Quad Cortex Tone Guide</title>
+
+<!-- Website typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+{{ partial "header.html" . }}
+
+<main class="container">
+
+  <!-- Song heading -->
+  <section class="hero">
+    <div class="eyebrow">Song-Inspired Tone Recipe</div>
+
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.artist }} — {{ .Params.album }}</p>
+  </section>
+
+  <!-- Guitar setup -->
+  <section class="card">
+    <div class="eyebrow">Guitar Setup</div>
+
+    <p><strong>Tuning:</strong> {{ .Params.tuning }}</p>
+    <p><strong>Guitar:</strong> {{ .Params.guitar }}</p>
+    <p><strong>Playing:</strong> {{ .Params.playing_style }}</p>
+  </section>
+
+
+<!-- Dynamic signal chain -->
+<section class="signal-section">
+
+  <div class="signal-heading">
+    <h2>Signal Chain</h2>
+    <span>Build left to right</span>
+  </div>
+
+  <div class="signal-chain" aria-label="Guitar signal chain">
+
+    {{ range $index, $block := .Params.chain }}
+
+    <div class="signal-block {{ if $block.optional }}is-optional{{ end }}">
+
+      <div class="signal-block-top">
+        <span class="block-number">
+          {{ printf "%02d" (add $index 1) }}
+        </span>
+
+        {{ if $block.optional }}
+        <span class="optional-indicator">Optional</span>
+        {{ end }}
+      </div>
+
+      <div class="block-type">
+        {{ $block.type }}
+      </div>
+
+      <h3>{{ $block.name }}</h3>
+
+      <p>{{ $block.description }}</p>
+
+    </div>
+
+    {{ end }}
+
+  </div>
+
+  <p class="signal-note">
+    Follow the chain from left to right.
+    Optional blocks can be bypassed.
+  </p>
+
+</section>
+
+  <!-- The Sound -->
+  {{ with .Params.sound }}
+  <section class="card sound-panel">
+    <div class="eyebrow">The Sound</div>
+    <p>{{ . }}</p>
+  </section>
+  {{ end }}
+
+  <!-- Beginner Route and Veteran Notes -->
+  <div class="guide-panels">
+
+    {{ with .Params.beginner_route }}
+    <section class="guide-panel beginner-panel">
+      <div class="panel-label">Beginner Route</div>
+      <p>{{ . }}</p>
+    </section>
+    {{ end }}
+
+    {{ with .Params.veteran_notes }}
+    <section class="guide-panel veteran-panel">
+      <div class="panel-label">Veteran Notes</div>
+      <p>{{ . }}</p>
+    </section>
+    {{ end }}
+
+  </div>
+
+  <!-- Before You Build -->
+{{ with .Params.before_you_build }}
+<section class="card before-build-panel">
+  <div class="eyebrow">Before You Build</div>
+  <p>{{ . }}</p>
+</section>
+{{ end }}
+
+  <!-- Numbered build instructions -->
+{{ with .Params.build_steps }}
+<section class="build-section">
+
+  <div class="eyebrow">Follow the Blocks / Build the Sound</div>
+
+  <h2>Build it in {{ len . }} steps</h2>
+
+  {{ with $.Params.build_intro }}
+  <p class="build-intro">{{ . }}</p>
+  {{ end }}
+
+  <div class="build-steps">
+
+    {{ range $index, $step := . }}
+    <div class="build-step">
+
+      <div class="step-number">
+        {{ printf "%02d" (add $index 1) }}
+      </div>
+
+      <div class="step-content">
+        <h3>{{ $step.title }}</h3>
+        <p>{{ $step.description }}</p>
+      </div>
+
+    </div>
+    {{ end }}
+
+  </div>
+
+</section>
+{{ end }}
+
+
+<!-- Scene configurations -->
+{{ with .Params.scenes }}
+<section class="scenes-section">
+
+  <div class="eyebrow">Scene Configurations</div>
+  <h2>Set up your scenes</h2>
+
+  <div class="scene-grid">
+
+    {{ range . }}
+    <div class="scene-card">
+
+      <div class="scene-heading">
+        <span class="scene-id">{{ .id }}</span>
+        <h3>{{ .name }}</h3>
+      </div>
+
+      <p>{{ .description }}</p>
+
+    </div>
+    {{ end }}
+
+  </div>
+
+</section>
+{{ end }}
+
+<!-- Troubleshooting tips -->
+{{ with .Params.troubleshooting }}
+<section class="troubleshooting-section">
+
+  <div class="eyebrow">
+    Troubleshooting / Fine-tune Your Sound
+  </div>
+
+  <div class="troubleshooting-grid">
+
+    {{ range . }}
+    <div class="troubleshooting-card">
+
+      <h3>{{ .problem }}</h3>
+
+      <p>{{ .solution }}</p>
+
+    </div>
+    {{ end }}
+
+  </div>
+
+</section>
+{{ end }}
+
+  <!-- Remaining recipe content -->
+  {{ with .Content }}
+  <section class="card recipe-content">
+    {{ . }}
+  </section>
+  {{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>
