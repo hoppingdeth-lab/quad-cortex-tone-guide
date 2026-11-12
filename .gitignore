@@ -9,6 +9,17 @@
 # VS Code local settings
 .vscode/
 
-# Windows files
+# Windows and macOS files
 Thumbs.db
 .DS_Store
+
+# Compiled Go binaries and libraries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test files
+*.test
+*.out
