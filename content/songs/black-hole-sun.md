@@ -40,36 +40,11 @@ beginner_route: >-
   chorus movement and bypass it if it blurs the solo.
 
 veteran_notes: >-
-  Kim Thayil has said that he played the chorus, solo and colour parts
-  on the studio recording, while Chris Cornell played the verse guitar.
-  Thayil described his solo as aggressive and unpredictable and recalled
-  that the Leslie cabinet used a different speed for the chorus parts.
-  The exact guitar, pickup, amp and settings for Thayil's specific
-  recorded parts are not fully documented. Thayil used Guild S-100
-  guitars on Superunknown, so a Guild-style S-100 with humbuckers is a
-  sensible starting point, not a verified track-specific instrument.
+  Kim Thayil confirmed he played the chorus, solo and colour parts on the studio recording, while Chris Cornell handled the verse guitar. Thayil described his solo as aggressive and unpredictable, with a different Leslie cabinet speed used for the chorus. His exact guitar, pickups, amp and settings remain undocumented. He used Guild S-100 guitars on Superunknown, making an S-100 with humbuckers a reasonable starting point, though not track-verified.
 
-  Producer Michael Beinhorn described a Marshall JMP 50 and Mesa/Boogie
-  Dual Rectifier blend for the heavy guitar sound on the record. That
-  does not establish that this exact blend was used for Thayil's solo.
-  CA Duo Ch3 Vintage is a verified Quad Cortex model of the Mesa/Boogie
-  Dual Rectifier, while Brit Plexi 50 Bright is a verified Marshall
-  Lead 50 model that can serve as a related alternative. Neither is an
-  exact model of the complete studio chain. This recipe uses one amp
-  in a serial chain; it does not present the two-amp studio blend as
-  a series path.
+  Producer Michael Beinhorn described blending a Marshall JMP 50 and Mesa/Boogie Dual Rectifier for the album's heavy guitar sound, but this isn't confirmed for Thayil's solo. Quad Cortex's CA Duo Ch3 Vintage accurately models the Dual Rectifier, while Brit Plexi 50 Bright models a related Marshall Lead 50. Neither recreates the full studio chain, and this recipe uses a single amp rather than a two-amp blend.
 
-  The Quad Cortex Rotary block is a practical effect approximation,
-  not a model of the Leslie Model 16 or its original recording setup.
-  A rotary effect was part of the recording's sound, but its exact
-  routing on Thayil's overdubs is uncertain. The serial placement here
-  keeps the recipe straightforward and will not recreate a separate
-  Leslie path, the original mic blend or the layered studio tracks.
-
-  Thayil often favoured a warmer neck pickup for solos, but said the
-  pickup choice depended on how warm the rhythm guitars were. Treat
-  bridge versus neck as a tonal choice for your guitar and mix, not a
-  documented setting for this specific solo.
+  The Quad Cortex Rotary block approximates the Leslie effect, but not the original Model 16, routing, mic blend or layered recordings. Although rotary effects featured on the track, their precise use on Thayil's overdubs is unclear. Thayil often preferred a warmer neck pickup for solos, depending on the rhythm guitar tone, so choose bridge or neck based on your guitar and mix rather than treating either as a confirmed setting.
 
 before_you_build: >-
   Some pitch analysis suggests the released recording
