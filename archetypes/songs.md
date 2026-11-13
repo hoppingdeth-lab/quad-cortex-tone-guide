@@ -1,4 +1,3 @@
-
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 artist: "ARTIST"
