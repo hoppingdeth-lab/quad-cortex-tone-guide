@@ -1328,3 +1328,148 @@ main.container > section {
     scroll-behavior: auto;
   }
 }
+
+/* =========================================
+   SIGNAL CHAIN LIBRARY - ALIGNED COMPACT LIST
+   ========================================= */
+
+/* One recipe per row */
+
+.library-section .recipe-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+/* Consistent columns across every recipe */
+
+.library-section .recipe-card {
+  display: grid;
+  grid-template-columns:
+    minmax(165px, 1.1fr)
+    minmax(0, 2fr)
+    minmax(180px, 1.25fr)
+    90px;
+
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "artist description tags footer"
+    "title  description tags footer";
+
+  column-gap: 20px;
+  row-gap: 4px;
+  align-items: center;
+
+  min-height: 86px;
+  height: auto;
+  padding: 15px 18px;
+  box-sizing: border-box;
+}
+
+/* Artist and title */
+
+.library-section .recipe-card-artist {
+  grid-area: artist;
+  margin: 0;
+  align-self: end;
+}
+
+.library-section .recipe-card h3 {
+  grid-area: title;
+  margin: 0;
+  align-self: start;
+  line-height: 1.2;
+}
+
+/* Description: maximum two lines */
+
+.library-section .recipe-card > p {
+  grid-area: description;
+  margin: 0;
+  line-height: 1.45;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Tone and tuning tags */
+
+.library-section .recipe-card-tags {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  margin: 0;
+  min-width: 0;
+}
+
+.library-section .recipe-card-tags span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* Footer aligned to far right */
+
+.library-section .recipe-card-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .library-section .recipe-card {
+    grid-template-columns: minmax(145px, 1fr) minmax(0, 2fr) 85px;
+    grid-template-areas:
+      "artist description footer"
+      "title  description footer"
+      "tags   tags        tags";
+    gap: 8px 16px;
+  }
+
+  .library-section .recipe-card-tags {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .library-section .recipe-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "artist footer"
+      "title footer"
+      "description description"
+      "tags tags";
+
+    gap: 7px 12px;
+    padding: 14px;
+    min-height: 0;
+  }
+
+  .library-section .recipe-card > p {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
+
+  .library-section .recipe-card-tags {
+    flex-wrap: wrap;
+  }
+}
+
