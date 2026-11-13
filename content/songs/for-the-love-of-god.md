@@ -7,7 +7,7 @@ tuning: "Seven-string standard: B–E–A–D–G–B–E"
 guitar: "Seven-string guitar, ideally an Ibanez Universe-style instrument. Start with the bridge humbucker for the lead; pickup choice is a practical recommendation, not a verified track-specific setting."
 playing_style: "Use controlled legato, wide vibrato, expressive bends and long held notes. Shape the phrases with picking dynamics and guitar volume; let the delay and reverb support the sustain rather than obscure the note."
 tone_type: "High Gain"
-draft: true
+draft: false
 
 chain:
   - name: "Chief DS1"
