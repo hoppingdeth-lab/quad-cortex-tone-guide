@@ -7,7 +7,7 @@ tuning: "E-flat standard: E♭–A♭–D♭–G♭–B♭–E♭"
 guitar: "Les Paul-style guitar with a moderate-output bridge humbucker. Slash's recording guitar was a late-1950s Les Paul Standard replica built by Kris Derrig, associated with Seymour Duncan Alnico II Pro pickups."
 playing_style: "Use a firm pick attack, strong bends and controlled vibrato. Keep the main riff direct and mid-forward. For the clean middle section, roll down the guitar volume; restore it for the heavier sections."
 tone_type: "High Gain"
-draft: true
+draft: false
 
 chain:
   - name: "Crying Wah"
