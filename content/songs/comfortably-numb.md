@@ -6,7 +6,7 @@ description: "David Gilmour's soaring 1979 studio outro tone, with Big Muff sust
 tuning: "Standard (E-A-D-G-B-E)"
 guitar: "Stratocaster-style guitar with a bridge single-coil pickup"
 playing_style: "Expressive lead playing, wide controlled bends, slow vibrato and sustained melodic phrasing"
-tone_type: "High Gain"
+tone_type: "Classic Rock"
 draft: false
 
 # SIGNAL CHAIN
