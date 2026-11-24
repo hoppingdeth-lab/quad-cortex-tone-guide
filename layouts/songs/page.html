@@ -27,9 +27,16 @@
   {{ end }}
 
   <meta property="og:url" content="{{ .Permalink }}">
+  
+  <!-- Social sharing image -->
+  <meta property="og:image" content="{{ "images/social-preview.png" | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Quad Cortex Tone Guide - Build the Recipe. Create the Sound.">
 
   <!-- Social sharing: X / Twitter -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ "images/social-preview.png" | absURL }}">
   <meta name="twitter:title" content="{{ .Title }} - {{ .Params.artist }} | Quad Cortex Tone Guide">
 
   {{ with .Params.description }}
