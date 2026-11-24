@@ -17,6 +17,25 @@
   <!-- SEO: Preferred website address -->
   <link rel="canonical" href="{{ .Permalink }}">
 
+  <!-- Social sharing: Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Quad Cortex Tone Guide">
+  <meta property="og:title" content="{{ .Title }} - {{ .Params.artist }} | Quad Cortex Tone Guide">
+
+  {{ with .Params.description }}
+  <meta property="og:description" content="{{ . }}">
+  {{ end }}
+
+  <meta property="og:url" content="{{ .Permalink }}">
+
+  <!-- Social sharing: X / Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }} - {{ .Params.artist }} | Quad Cortex Tone Guide">
+
+  {{ with .Params.description }}
+  <meta name="twitter:description" content="{{ . }}">
+  {{ end }}
+
 <!-- Website typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
