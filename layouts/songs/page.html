@@ -6,7 +6,16 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>{{ .Title }} | Quad Cortex Tone Guide</title>
+  <!-- SEO: Unique page title -->
+  <title>{{ .Title }} - {{ .Params.artist }} | Quad Cortex Tone Guide</title>
+
+  <!-- SEO: Description from the recipe YAML -->
+  {{ with .Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{ end }}
+
+  <!-- SEO: Preferred website address -->
+  <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Website typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
