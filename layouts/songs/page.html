@@ -251,6 +251,57 @@
   </section>
   {{ end }}
 
+<!-- Related Recipes -->
+{{ $currentTone := .Params.tone_type }}
+{{ $currentPage := . }}
+{{ $related := slice }}
+
+{{ if $currentTone }}
+  {{ range where site.RegularPages "Section" "songs" }}
+    {{ if and (ne .RelPermalink $currentPage.RelPermalink) (eq .Params.tone_type $currentTone) }}
+      {{ $related = $related | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $related = first 3 $related }}
+
+{{ with $related }}
+<section class="related-recipes-section">
+
+  <div class="eyebrow">Keep Exploring</div>
+  <h2>Explore Similar Tones</h2>
+
+  <p class="related-recipes-intro">
+    More song-inspired Quad Cortex recipes with a similar tone.
+  </p>
+
+  <div class="related-recipes-grid">
+
+    {{ range . }}
+    <a class="related-recipe-card" href="{{ .RelPermalink }}">
+
+      <div class="related-recipe-artist">
+        {{ .Params.artist }}
+      </div>
+
+      <h3>{{ .Title }}</h3>
+
+      <p>{{ .Params.description }}</p>
+
+      <div class="related-recipe-footer">
+        <span>{{ len .Params.chain }} BLOCKS</span>
+        <span aria-hidden="true">&rarr;</span>
+      </div>
+
+    </a>
+    {{ end }}
+
+  </div>
+
+</section>
+{{ end }}
+
 </main>
 
 {{ partial "footer.html" . }}
