@@ -48,6 +48,52 @@ chain:
     type: "cab"
     description: "Heavy path: powerful 4x12 tone"
 
+# ADVANCED SIGNAL ROUTING
+routing:
+  type: "parallel"
+  mode: "scene_switch"
+
+  switching:
+    method: "scene_assigned_output_mute"
+    description: >-
+      Assign the Mute parameter of each path's
+      output lane to Scenes. Scene A unmutes
+      the clean path and mutes the heavy path.
+      Scene B mutes the clean path and unmutes
+      the heavy path. Do not rely on amplifier
+      bypass alone to silence an inactive path.
+
+  description: >-
+    Two separate signal paths share the guitar input.
+    Scene A selects the warped clean tone.
+    Scene B selects the heavy rhythm tone.
+    Only one path should be audible at a time.
+
+  paths:
+    - id: "A"
+      name: "Warped Clean"
+      scene: "A"
+      blocks:
+        - "FLANGERISH"
+        - "TAPE DELAY"
+        - "ROL JAZZ CH120"
+        - "212 ROL JAZZ '87"
+
+    - id: "B"
+      name: "Heavy Rhythm"
+      scene: "B"
+      blocks:
+        - "SIMPLE GATE"
+        - "CA DUO CH3 MODERN"
+        - "412 CA STAND OS S V30 90s"
+
+  output:
+    description: >-
+      Route both branches to the intended output.
+      Configure Scenes to silence the inactive
+      branch completely. Match the perceived
+      loudness of Scenes A and B.
+
 # THE SOUND
 
 sound: >-
@@ -239,7 +285,7 @@ build_steps:
 
   - title: "Build the clean amplifier sound"
     description: >-
-      On the clean path, add Ros Jazz
+      On the clean path, add Rol Jazz
       CH120 followed by 212 Rol Jazz
       '87. Keep the amplifier clean.
       As a tonal target, begin with

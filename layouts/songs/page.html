@@ -77,48 +77,193 @@
   </section>
 
 
+
 <!-- Dynamic signal chain -->
 <section class="signal-section">
 
   <div class="signal-heading">
     <h2>Signal Chain</h2>
-    <span>Build left to right</span>
+    <span>
+      {{ with .Params.routing }}
+        {{ if eq .type "parallel" }}
+          {{ if eq .mode "scene_switch" }}
+            PARALLEL / SCENE-SWITCHED
+          {{ else }}
+            PARALLEL ROUTING
+          {{ end }}
+        {{ else }}
+          Build left to right
+        {{ end }}
+      {{ else }}
+        Build left to right
+      {{ end }}
+    </span>
   </div>
 
-  <div class="signal-chain" aria-label="Guitar signal chain">
+  {{ $chain := .Params.chain }}
 
-    {{ range $index, $block := .Params.chain }}
+  {{ with .Params.routing }}
+    {{ if eq .type "parallel" }}
 
-    <div class="signal-block {{ if $block.optional }}is-optional{{ end }}">
+      <!-- Advanced routing display -->
+      <div class="routing-diagram">
 
-      <div class="signal-block-top">
-        <span class="block-number">
-          {{ printf "%02d" (add $index 1) }}
-        </span>
+        
+  <div class="routing-input">
+    GUITAR INPUT
+  </div>
 
-        {{ if $block.optional }}
-        <span class="optional-indicator">Optional</span>
+  <!-- Visual signal split -->
+  <div class="routing-connector routing-connector-split"
+     aria-hidden="true">
+    <span class="routing-connector-stem"></span>
+    <span class="routing-connector-branches"></span>
+  </div>
+
+  <p class="routing-split-label">
+    Split into separate signal paths
+  </p>
+
+        <div class="routing-paths">
+
+          {{ range .paths }}
+          <div class="routing-path">
+
+            <div class="routing-path-heading">
+              <h3>PATH {{ .id }} — {{ .name }}</h3>
+              {{ with .scene }}
+              <span class="routing-scene">
+                SCENE {{ . }}
+              </span>
+              {{ end }}
+            </div>
+
+            <div class="routing-path-blocks">
+
+              {{ range $index, $blockName := .blocks }}
+
+                {{ $matches := where $chain "name" $blockName }}
+
+                {{ range first 1 $matches }}
+                <div class="signal-block">
+
+                  <div class="signal-block-top">
+                    <span class="block-number">
+                      {{ printf "%02d" (add $index 1) }}
+                    </span>
+                  </div>
+
+                  <div class="block-type">
+                    {{ .type }}
+                  </div>
+
+                  <h3>{{ .name }}</h3>
+                  <p>{{ .description }}</p>
+
+                </div>
+                {{ end }}
+
+              {{ end }}
+
+            </div>
+
+          </div>
+          {{ end }}
+
+        </div>
+
+        <!-- Visual signal merge -->
+        <div class="routing-connector routing-connector-merge"
+            aria-hidden="true">
+          <span class="routing-connector-branches"></span>
+          <span class="routing-connector-stem"></span>
+        </div>
+
+<div class="routing-output">
+  OUTPUT
+</div>
+
+      </div>
+
+      {{ with .description }}
+      <p class="routing-description">{{ . }}</p>
+      {{ end }}
+
+      <p class="routing-illustration-note">
+        <strong>Routing illustration:</strong>
+        This diagram shows the intended signal flow.
+        Exact grid placement and Scene assignments should be
+        checked on the Quad Cortex.
+      </p>
+
+      {{ with .output.description }}
+      <div class="routing-output-notes">
+        <strong>Output routing:</strong> {{ . }}
+      </div>
+      {{ end }}
+      
+      {{ with .switching }}
+        {{ with .description }}
+        <div class="routing-output-notes">
+        <strong>Scene switching:</strong> {{ . }}
+        </div>
         {{ end }}
-      </div>
+      {{ end }}
+      {{ if eq .mode "scene_switch" }}
+      <p class="routing-warning">
+        Scene-switched routing: only one path should be
+        audible at a time. The paths are not connected
+        in series.
+      </p>
+      {{ end }}
 
-      <div class="block-type">
-        {{ $block.type }}
-      </div>
+    {{ else }}
 
-      <h3>{{ $block.name }}</h3>
-
-      <p>{{ $block.description }}</p>
-
-    </div>
+      <p class="signal-note">
+        Unsupported routing type. Check the recipe YAML.
+      </p>
 
     {{ end }}
 
-  </div>
+  {{ else }}
 
-  <p class="signal-note">
-    Follow the chain from left to right.
-    Optional blocks can be bypassed.
-  </p>
+    <!-- Standard serial signal chain -->
+    <div class="signal-chain" aria-label="Guitar signal chain">
+
+      {{ range $index, $block := .Params.chain }}
+
+      <div class="signal-block {{ if $block.optional }}is-optional{{ end }}">
+
+        <div class="signal-block-top">
+          <span class="block-number">
+            {{ printf "%02d" (add $index 1) }}
+          </span>
+
+          {{ if $block.optional }}
+          <span class="optional-indicator">Optional</span>
+          {{ end }}
+        </div>
+
+        <div class="block-type">
+          {{ $block.type }}
+        </div>
+
+        <h3>{{ $block.name }}</h3>
+
+        <p>{{ $block.description }}</p>
+
+      </div>
+
+      {{ end }}
+
+    </div>
+
+    <p class="signal-note">
+      Follow the chain from left to right.
+      Optional blocks can be bypassed.
+    </p>
+
+  {{ end }}
 
 </section>
 
