@@ -1788,3 +1788,147 @@ body:has(a[href^="mailto:"]) main a[href^="mailto:"] {
 body:has(a[href^="mailto:"]) main a[href^="mailto:"]:hover {
   color: #f5ead6;
 }
+
+/* ========================================
+   INTERACTIVE BUILD MODE
+======================================== */
+
+.build-progress {
+  background: var(--surface);
+  border: 1px solid #304254;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.build-progress[hidden] {
+  display: none;
+}
+
+.build-progress-heading,
+.build-progress-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.build-progress-heading strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.build-progress-count {
+  color: var(--teal);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.build-progress-bar {
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin: 18px 0;
+  accent-color: var(--teal);
+}
+
+.build-progress-bar::-webkit-progress-bar {
+  background: var(--surface-light);
+  border-radius: 20px;
+}
+
+.build-progress-bar::-webkit-progress-value {
+  background: var(--teal);
+  border-radius: 20px;
+}
+
+.build-progress-bar::-moz-progress-bar {
+  background: var(--teal);
+  border-radius: 20px;
+}
+
+.build-progress-footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.build-reset {
+  background: transparent;
+  border: 1px solid #405166;
+  border-radius: 8px;
+  color: var(--teal);
+  padding: 9px 14px;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.build-reset:hover {
+  border-color: var(--teal);
+  background: var(--surface-light);
+}
+
+.build-reset:focus-visible,
+.build-step-checkbox:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+}
+
+/* Hide interactive controls until JS initialises */
+
+.build-step-toggle {
+  display: none;
+}
+
+.build-section.is-interactive .build-step-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--teal);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.build-step-checkbox {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  accent-color: var(--teal);
+  cursor: pointer;
+}
+
+/* Completed step appearance */
+
+.build-step.is-complete .step-number {
+  background: var(--teal);
+  color: var(--background);
+}
+
+.build-step.is-complete .build-step-toggle span {
+  color: var(--muted);
+}
+
+.build-step.is-complete .step-content h3 {
+  color: var(--teal);
+}
+
+/* Mobile refinements */
+
+@media (max-width: 600px) {
+  .build-progress {
+    padding: 20px;
+  }
+
+  .build-progress-heading,
+  .build-progress-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .build-step-toggle {
+    min-height: 44px;
+  }
+}

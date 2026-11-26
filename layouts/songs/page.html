@@ -301,9 +301,9 @@
 </section>
 {{ end }}
 
-  <!-- Numbered build instructions -->
+<!-- Interactive build instructions -->
 {{ with .Params.build_steps }}
-<section class="build-section">
+<section class="build-section" data-build-recipe="{{ $.RelPermalink }}">
 
   <div class="eyebrow">Follow the Blocks / Build the Sound</div>
 
@@ -313,8 +313,31 @@
   <p class="build-intro">{{ . }}</p>
   {{ end }}
 
-  <div class="build-steps">
+  <!-- Revealed when JavaScript is available -->
+  <div class="build-progress" hidden>
+    <div class="build-progress-heading">
+      <strong>Build progress</strong>
+      <span class="build-progress-count" role="status"
+            aria-live="polite" aria-atomic="true">
+        0 of {{ len . }} steps complete
+      </span>
+    </div>
 
+    <progress class="build-progress-bar"
+              value="0"
+              max="{{ len . }}"
+              aria-label="Recipe build progress">
+    </progress>
+
+    <div class="build-progress-footer">
+      <span>Progress is saved in this browser.</span>
+      <button class="build-reset" type="button">
+        Reset progress
+      </button>
+    </div>
+  </div>
+
+  <div class="build-steps">
     {{ range $index, $step := . }}
     <div class="build-step">
 
@@ -325,16 +348,22 @@
       <div class="step-content">
         <h3>{{ $step.title }}</h3>
         <p>{{ $step.description }}</p>
+
+        <label class="build-step-toggle">
+          <input type="checkbox"
+                 class="build-step-checkbox"
+                 data-step-index="{{ $index }}"
+                 aria-label="Complete step {{ add $index 1 }}: {{ $step.title }}">
+          <span>Mark as complete</span>
+        </label>
       </div>
 
     </div>
     {{ end }}
-
   </div>
 
 </section>
 {{ end }}
-
 
 <!-- Scene configurations -->
 {{ with .Params.scenes }}
@@ -449,6 +478,8 @@
 </main>
 
 {{ partial "footer.html" . }}
+
+<script src="/js/build-mode.js" defer></script>
 
 </body>
 </html>
