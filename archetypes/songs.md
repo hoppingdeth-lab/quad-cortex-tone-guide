@@ -25,6 +25,27 @@ chain:
     type: "reverb"
     description: "WHAT THIS BLOCK DOES"
 
+# ADVANCED ROUTING (OPTIONAL)
+#
+# Standard serial recipes use only chain.
+#
+# For separate signal paths, add a routing:
+# section here using my-way.md as the example.
+#
+# Keep chain as the complete device inventory.
+# Every routing.paths.blocks name must exactly
+# match a unique name in chain.
+#
+# For Scene-switched paths use:
+#   type: "parallel"
+#   mode: "scene_switch"
+#
+# Include switching, description, paths
+# and output information.
+#
+# Do not add routing for serial recipes.
+# Do not invent unsupported routing modes.
+
 # THE SOUND
 # Describe what the finished tone should sound like.
 
@@ -71,23 +92,24 @@ build_intro: >-
 
 # STEP-BY-STEP BUILD
 # Copy a step to add more, or delete unnecessary steps.
+# Hugo automatically numbers the steps.
 
 build_steps:
-  - title: "Step 1 - Prepare the guitar"
+  - title: "Prepare the guitar"
     description: >-
       ENTER TUNING, PICKUP AND GUITAR PREPARATION.
 
-  - title: "Step 2 - Set up the amplifier"
+  - title: "Set up the amplifier"
     description: >-
       ENTER AMP MODEL AND STARTING SETTINGS.
       Include Gain, Bass, Mid, Treble, Presence
       and output level where applicable.
 
-  - title: "Step 3 - Configure the cabinet"
+  - title: "Configure the cabinet"
     description: >-
       ENTER CABINET, MICROPHONE AND EQ SETTINGS.
 
-  - title: "Step 4 - Add effects"
+  - title: "Add effects"
     description: >-
       ENTER EFFECT MODELS, SETTINGS AND PLACEMENT.
       Split this into additional steps if needed.
