@@ -1776,3 +1776,15 @@ main.container > section {
     height: 16px;
   }
 }
+
+/* CONTACT PAGE LINKS */
+
+body:has(a[href^="mailto:"]) main a[href^="mailto:"] {
+  color: #2dd4bf;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body:has(a[href^="mailto:"]) main a[href^="mailto:"]:hover {
+  color: #f5ead6;
+}
