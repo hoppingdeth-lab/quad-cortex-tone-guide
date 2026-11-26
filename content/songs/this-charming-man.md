@@ -1,194 +1,227 @@
 ---
 title: "This Charming Man"
 artist: "The Smiths"
-album: "Single (1983); The Smiths (1984)"
-description: "Johnny Marr’s bright, tightly compressed and tremolo-touched guitar sound, inspired by the Telecaster and Rickenbacker layers on the original studio single."
-tuning: "F# standard: F#–B–E–A–C#–F#"
-guitar: "A Telecaster-style guitar is the closest starting point for the main recorded layer. Marr described the intro as mostly a borrowed 1953/54 Telecaster tracked with a Rickenbacker. A Rickenbacker-style guitar can supply a complementary jangle when double-tracking."
-playing_style: "Pick the arpeggios evenly and let open strings ring into one another. Keep the attack bright and controlled; use tight rhythmic accents and let the tremolo add movement without obscuring the picked notes."
+album: "Single (1983); later included on Hatful of Hollow (1984)"
+description: "Johnny Marr-inspired clean, chiming guitar with a Twin-style core and optional stereo width and reverse texture for the song’s layered arrangement."
+tuning: "F# standard (F#-B-E-A-C#-F#)"
+guitar: "Rickenbacker 330-style guitar for the bright main part, with a Telecaster-style guitar as a useful additional layer or substitute"
+playing_style: "Play tightly picked arpeggios, clipped rhythmic figures and bright chord voicings; keep the attack precise and let selected strings ring into one another."
 tone_type: "Clean"
 draft: false
 
 chain:
-  - name: "Neural Compressor"
-    type: "compressor"
-    description: "Light compression."
-
   - name: "US TWN Vibrato"
     type: "amp"
-    description: "Fender Twin Reverb-based amplifier model."
-
-  - name: "212 US TWN CK2"
-    type: "cab"
-    description: "Matching Twin Reverb-style cabinet model."
+    description: "Clean Fender Twin Reverb-style amp model; a practical match for Marr’s reported Twin setup"
 
   - name: "Tremolo"
     type: "modulation"
-    description: "Adds the tremolo heard on the Twin-based guitar layer."
+    description: "Optional subtle amplitude pulse to approximate the reported Twin vibrato setting if the amp model does not provide usable modulation controls"
+    optional: true
+
+  - name: "212 US TWN CK2"
+    type: "cab"
+    description: "Twin Reverb-style 2x12 cabinet with Jensen speakers; a stock clean-tone pairing"
+
+  - name: "Doubler"
+    type: "modulation"
+    description: "Optional, restrained stereo width to suggest the layered guitar arrangement; not a replacement for separately played overdubs"
+    optional: true
 
   - name: "Reverse Delay"
     type: "delay"
+    description: "Optional low-mix reverse texture to suggest the backwards guitar layer; it does not reproduce a reversed recording"
     optional: true
-    description: "Optional approximation of one backwards guitar texture."
 
   - name: "Hall"
     type: "reverb"
+    description: "Optional longer reverb after Reverse Delay for the atmospheric reverse layer"
     optional: true
-    description: "Optional space for the backwards-texture approximation."
 
 sound: >-
-  Aim for a bright, crisp and tightly controlled guitar sound. The core
-  character comes from the Telecaster and Rickenbacker blend, the firm
-  picking attack, light compression and tremolo. Keep the main arpeggios
-  clear and rhythmically precise. The original recording is much denser
-  than a single guitar chain; the optional reverse and reverb blocks
-  provide one playable texture, not a reconstruction of the full
-  overdubbed arrangement.
+  Keep the core sound clean, bright and sharply articulated, with a
+  quick attack and enough body for the overlapping chord shapes to
+  remain distinct. The recognisable movement comes from the interlocking
+  guitar parts, precise picking and selected ringing notes rather than
+  heavy gain. For the fuller sections, add only modest stereo width.
+  Reserve the reverse delay and long reverb for a faint atmospheric
+  layer; they should not blur the main riff.
 
 beginner_route: >-
-  Start with Neural Compressor, US TWN Vibrato, 212 US TWN CK2 and
-  Tremolo. Use a Telecaster-style bridge pickup as a practical starting
-  point, tune to F# standard if your strings and instrument can handle
-  it, and play the arpeggios evenly. Keep the amp clean and the
-  compressor light. Add the optional Reverse Delay and Hall only if you
-  want an extra studio-like texture.
+  Start with US TWN Vibrato and 212 US TWN CK2. Keep the amp clean and
+  focus on the tight, bright picking and ringing chord voicings. Add
+  Tremolo only if you want a subtle pulse, then try Doubler at a low
+  mix for a wider chorus sound. Leave Reverse Delay and Hall off until
+  the core part is clear.
 
 veteran_notes: >-
-  Marr described the intro as mostly a borrowed 1953/54 Telecaster
-  tracked with a Rickenbacker. In a separate interview, he said the
-  Telecaster sound on “This Charming Man” was compressed and ran through
-  a very loud Fender Twin Reverb with tremolo on. He also described the
-  song as having around 15 guitar tracks, including acoustic parts, a
-  backwards guitar and the knife-string clangs at the ends of choruses.
+  Marr described the main recorded sound as a combination of
+  Rickenbacker and Telecaster, and recalled using a loud Telecaster
+  through a Fender Twin Reverb with its vibrato on. He also described
+  many guitar overdubs, acoustic layers, a backwards guitar with long
+  reverb and a metal-handled knife dropped onto the strings for a
+  bright clang at the end of the chorus. These details describe a
+  layered studio production, not one guitar running through a single
+  effects chain.
 
-  This recipe models a single serial signal path for a practical
-  Quad Cortex preset. It does not represent the original multitrack
-  recording as a series of effects, and it does not recreate the
-  different guitar layers. The optional Reverse Delay and Hall are
-  effects-based approximations of one backwards, reverberant layer;
-  they are not a literal recreation of the recording technique. The
-  original compressor model, Twin revision, speaker cabinet, mic
-  arrangement and exact effect settings remain unconfirmed.
+  US TWN Vibrato and 212 US TWN CK2 are stock Quad Cortex models based
+  on a Fender Twin Reverb and its 2x12 cabinet. Tremolo, Doubler,
+  Reverse Delay and Hall are optional approximations for specific
+  production colours. The reverse effect here is generated live and
+  will not sound identical to recording a part backwards. The knife
+  clang is a physical string effect; use a controlled harmonic or
+  string scrape if you want a playable approximation.
 
-  Marr identified F# standard tuning for the song. If you prefer not to
-  raise all six strings, standard tuning with a capo at fret two is a
-  practical pitch alternative, but changes the open-string feel and
-  response. Use the Telecaster as the main tonal reference; a
-  Rickenbacker-style guitar or a separately recorded second pass can
-  add the documented complementary jangle.
+  Marr’s reports include both an F#-tuned part and an open-chord
+  Telecaster layer. They may describe different overdubs. F# standard
+  is the practical starting point here; do not assume every layer
+  used the same tuning. The tone and effect settings below are
+  suggestions, not recovered session values.
 
 before_you_build: >-
-  Tune to F#–B–E–A–C#–F# if your strings and instrument are suitable
-  for tuning a whole step above standard. Lighter-gauge strings can
-  make this more practical; otherwise, use standard tuning with a capo
-  at the second fret as an approximation. The source evidence identifies
-  a borrowed early-1950s Telecaster and a Rickenbacker in the recorded
-  blend, but does not establish the exact pickup selection for every
-  overdub. Start with a bright Telecaster-style pickup setting and adjust
-  by ear.
+  This is an original, ear-led Quad Cortex recipe inspired by the
+  studio recording. It is not an exact reconstruction of the many
+  guitar overdubs or a supplied preset file.
+
+  For the main part, use F# standard (F#-B-E-A-C#-F#), as Marr
+  described tuning up to F#. To avoid the increased string tension,
+  a capo at the second fret of a standard-tuned guitar gives the
+  same sounding pitch for the same shapes. Check your chosen
+  transcription: Marr also described an open-chord Telecaster layer,
+  which may use a different tuning. Use a bright bridge-pickup sound
+  as a practical starting point.
+
+  This recipe uses one serial chain. Doubler, Reverse Delay and Hall
+  are optional production approximations, not separate signal paths
+  or substitutes for the original overdubs. Check stereo effects in
+  mono before using them in a live or mono-output setup.
 
 build_intro: >-
-  All numerical values are practical starting points, not recovered
-  studio settings. Build the clear, compressed amp tone first, then add
-  tremolo. Use the reverse and reverb blocks only for an optional
-  single-player texture; the original recording uses multiple overdubs.
+  All numerical values are practical starting points, not documented
+  recording settings. Your guitar, pickups, monitoring and playing
+  level will affect the result. Build the clean amp and cabinet first,
+  then introduce effects one at a time and level-match them.
 
 build_steps:
   - title: "Prepare the guitar"
     description: >-
-      Tune to F#–B–E–A–C#–F# if appropriate for your guitar and strings.
-      If not, use standard tuning with a capo at the second fret as a
-      practical alternative. Begin with a Telecaster-style guitar and
-      a bright pickup setting. Pick the arpeggios evenly, letting the
-      open strings ring clearly.
+      Use F# standard (F#-B-E-A-C#-F#) for the main part, or place a
+      capo at the second fret of a standard-tuned guitar for the same
+      sounding pitch. Marr also described an open-chord Telecaster
+      layer, so check your transcription for any separate part that
+      calls for another tuning. Start with a bright bridge-pickup
+      sound and crisp, even picking.
 
-  - title: "Set light compression"
+  - title: "Set the Twin-style amp"
     description: >-
-      Select Neural Compressor before the amp. Aim for light, even
-      compression rather than a squashed sound: use a low compression
-      amount or adjust the threshold for roughly 2–4 dB of gain
-      reduction on stronger attacks, if those controls are available.
-      Match the output level to the bypassed sound. This approximates
-      Marr’s description of a compressed Telecaster; it is not a
-      verified original compressor setting.
-
-  - title: "Set the Twin Reverb model"
-    description: >-
-      Select US TWN Vibrato. Keep the amp clean and bright. As approximate
-      starting points on a 0–10 scale, try Volume around 5, Bass 4,
-      Mid 5 and Treble 6 where those controls are available. Set output
-      for a strong but comfortable level. The original amp was described
-      as very loud, but do not use a high listening level as a substitute
-      for the recorded amp volume.
+      Choose US TWN Vibrato. Keep the sound clean. As starting points,
+      try Volume around 3.5/10, Bass 4/10, Mid 5/10 and Treble 6/10,
+      where these controls are available. Set the output for your
+      monitoring level. If the amp model offers usable vibrato or
+      tremolo controls, begin with a slow rate and low intensity.
 
   - title: "Choose the cabinet"
     description: >-
-      Select 212 US TWN CK2. If microphone selection is available, begin
-      with a dynamic microphone slightly off the speaker centre. If the
-      cabinet block provides filters, try a low cut near 80 Hz and a
-      high cut near 8 kHz. These are suggested starting points; the
-      original speaker and recording microphone are not confirmed.
+      Place 212 US TWN CK2 after the amp. If microphone controls are
+      available, start with a dynamic microphone slightly off the
+      speaker centre. Try a low cut near 80 Hz and a high cut near
+      9 kHz as initial targets. These are tonal suggestions, not
+      documented microphone or cabinet settings from the session.
 
-  - title: "Add tremolo"
+  - title: "Add subtle tremolo if needed"
     description: >-
-      Place Tremolo after the cabinet in this simplified chain. Start
-      with a moderate rate and a restrained depth, around 15–25% if the
-      device uses a percentage control. Adjust by ear so the movement
-      is audible but the arpeggios remain clear. The original Twin’s
-      tremolo settings are unknown.
+      If the amp model does not provide usable vibrato or tremolo,
+      enable the Tremolo block between the amp and cabinet. Start
+      around 2 Hz with depth near 8-10%, if those controls are
+      available. Keep the pulse subtle and do not use this block
+      when the amp’s own modulation is already active.
 
-  - title: "Add optional reverse texture"
+  - title: "Add width for the fuller sections"
     description: >-
-      For a single-player approximation of one backwards guitar layer,
-      engage Reverse Delay and add a low level of Hall after it. Keep
-      both effects subtle and bypass them for the core riff tone. This
-      effect chain is a modern approximation; the original part was a
-      separately recorded backwards guitar with reverb.
+      Enable Doubler after the cabinet only if you are using a stereo
+      output and want a modest widening effect. If a Mix control is
+      available, begin around 10-15%. Keep the original attack clear
+      and check the result in mono. This is a practical stand-in for
+      layered takes, not a claim about the original signal processing.
+
+  - title: "Shape the reverse texture"
+    description: >-
+      For an optional atmospheric layer, place Reverse Delay after
+      Doubler and before Hall. Start with a low mix around 10-15%,
+      minimal feedback and a time around 350-500 ms if the controls
+      are available. Set Hall after it with a longer decay of roughly
+      3-4 seconds and a low mix around 10-15%. Keep this texture
+      faint enough that the dry picked part remains clear.
+
+  - title: "Balance the Scenes"
+    description: >-
+      Use Scene A for the clear main part, Scene B for a slightly wider
+      chorus texture and Scene C only when you want to suggest the
+      backwards, reverberant layer. Match perceived volume between
+      Scenes. These are performance proposals rather than recovered
+      session configurations.
 
 scenes:
   - id: "A"
-    name: "Chiming Riff"
+    name: "Main Jangle"
     description: >-
-      Neural Compressor, US TWN Vibrato, 212 US TWN CK2 and Tremolo active.
-      Keep Reverse Delay and Hall bypassed. Use a bright Telecaster-style
-      sound and prioritise even picking and clear open strings.
+      Use US TWN Vibrato and 212 US TWN CK2 with a clean amp setting.
+      Keep Doubler, Reverse Delay and Hall bypassed. Use either the
+      amp’s subtle vibrato/tremolo or the Tremolo block at low depth,
+      not both. This Scene is for the main picked figure and clear
+      interlocking chords.
 
   - id: "B"
-    name: "Studio Texture"
+    name: "Full Chorus"
     description: >-
-      Keep the core amp and tremolo settings from Scene A. Engage Reverse
-      Delay and Hall at low levels for a wider, more atmospheric single-
-      player interpretation. These blocks approximate one overdub and
-      do not reproduce the original multitrack arrangement.
+      Keep the clean amp and cabinet settings. Engage Doubler at a
+      modest stereo mix for a little extra width. Keep reverse delay
+      and Hall bypassed so the chorus attack remains clear. Check the
+      stereo effect in mono and match its output level to Scene A.
+
+  - id: "C"
+    name: "Reverse Colour"
+    description: >-
+      Keep the main amp and cabinet active. Engage Reverse Delay
+      followed by Hall at the low mixes suggested above, with Doubler
+      optional. Use this only as a restrained approximation of the
+      backwards reverberant guitar layer; it is not the sound of the
+      knife striking the strings.
 
 troubleshooting:
-  - problem: "The tone is too thin or piercing."
+  - problem: "The clean tone is too sharp?"
     solution: >-
-      Reduce Treble slightly or use a fuller pickup setting. Check that
-      the guitar is in the intended tuning; a capo alternative may feel
-      different under the fingers and produce a different attack.
+      Reduce Treble slightly or move the cabinet microphone farther
+      off the speaker centre if that control is available. Keep enough
+      top end for the picked notes to retain their chime.
 
-  - problem: "The arpeggios sound uneven."
+  - problem: "The sound is too thin?"
     solution: >-
-      Reduce compressor amount if the attack is being exaggerated or
-      flattened. Focus on even picking and let each note ring clearly
-      before increasing compression.
+      Raise the amp Mid slightly or bring the microphone closer to the
+      speaker centre. Check that the low cut is not set too high.
 
-  - problem: "The tremolo obscures the rhythm."
+  - problem: "The tremolo pulse is too obvious?"
     solution: >-
-      Reduce Tremolo depth or lower its rate. The picked pattern should
-      remain easy to follow with the effect engaged.
+      Reduce Tremolo depth or bypass the block if the amp’s own
+      modulation is active. Use only one tremolo source at a time.
 
-  - problem: "The sound is too clean or lacks body."
+  - problem: "Doubler sounds phasey or disappears in mono?"
     solution: >-
-      Raise the amp input or volume slightly, while keeping the output
-      level comfortable. Try a little less compression if it is making
-      the attack feel small.
+      Reduce its mix or bypass it. The original width came from
+      separately performed overdubs, so a single stereo effect will
+      not translate identically to mono.
 
-  - problem: "Reverse Delay and Hall make the riff unclear."
+  - problem: "Reverse Delay and Hall obscure the riff?"
     solution: >-
-      Bypass both optional blocks or lower their mix levels. Use them
-      only for the atmospheric texture; the main riff should work with
-      the core chain alone.
+      Lower the Reverse Delay mix first, then shorten the Hall decay
+      or reduce its mix. Keep these effects for a quiet background
+      colour rather than the main guitar sound.
 
+  - problem: "The F# tuning feels too tense?"
+    solution: >-
+      Use a capo at the second fret of a standard-tuned guitar to
+      achieve the same sounding pitch without tuning every string
+      higher. Check intonation and follow the tuning required by
+      your chosen transcription.
 ---
+```

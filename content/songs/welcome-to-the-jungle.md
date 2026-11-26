@@ -2,229 +2,242 @@
 title: "Welcome to the Jungle"
 artist: "Guns N' Roses"
 album: "Appetite for Destruction (1987)"
-description: "Slash's aggressive, mid-forward Les Paul and modified Marshall sound, with a delayed opening figure and a guitar-volume-cleaned middle section."
-tuning: "E-flat standard: E♭–A♭–D♭–G♭–B♭–E♭"
-guitar: "Les Paul-style guitar with a moderate-output bridge humbucker. Slash's recording guitar was a late-1950s Les Paul Standard replica built by Kris Derrig, associated with Seymour Duncan Alnico II Pro pickups."
-playing_style: "Use a firm pick attack, strong bends and controlled vibrato. Keep the main riff direct and mid-forward. For the clean middle section, roll down the guitar volume; restore it for the heavier sections."
+description: "Slash-inspired, mid-forward Marshall crunch with the song’s delayed intro, dry riff, volume-rolled-back middle and reverberant accents."
+tuning: "E-flat standard (Eb-Ab-Db-Gb-Bb-Eb)"
+guitar: "Les Paul-style guitar with humbuckers; a bridge pickup is a practical starting point. Slash recorded the album with a Kris Derrig-built Les Paul replica and a Seymour Duncan Alnico II Pro bridge pickup."
+playing_style: "Use a firm pick attack, controlled palm muting, blues-based bends and slides; roll the guitar volume back for the clean middle section."
 tone_type: "High Gain"
 draft: false
 
 chain:
-  - name: "Crying Wah"
-    type: "wah"
+  - name: "Gain"
+    type: "utility"
+    description: "Optional modest input push if the stock amp model needs more drive; this does not recreate the original amplifier modification"
     optional: true
-    description: "Cry Baby-style wah for lead phrasing if desired. Slash used a Cry Baby on some leads, but its use on this specific recording is not firmly established."
-
-  - name: "Neural Compressor"
-    type: "compressor"
-    optional: true
-    description: "Optional light compression for control. No specific compressor model is confirmed for this recording."
 
   - name: "Brit Plexi 100 Bright"
     type: "amp"
-    description: "Marshall Super Lead 100-based model. This approximates the reported Super Lead amp family, not the exact disputed S.I.R. rental modification."
+    description: "Marshall Super Lead 100 model used as a practical stand-in for the modified Appetite-era Marshall"
 
   - name: "412 Brit 60B V30 ’95"
     type: "cab"
-    description: "Marshall 1960B-style 4x12 cabinet with Vintage 30 drivers, approximating the published cabinet description."
+    description: "Marshall 1960-style 4x12 with Vintage 30 speakers, matching the reported cabinet family"
 
   - name: "Digital Delay"
     type: "delay"
+    description: "Optional digital echo for the intro and selected slide or stab accents; an approximation of the Roland SRV-2000 delay mode"
     optional: true
-    description: "Digital delay for the opening figure and selected accents. The original Roland SRV-2000 was used in a delay mode; this Quad Cortex block is a functional substitute."
 
   - name: "Plate"
     type: "reverb"
+    description: "Optional plate reverb for the delayed stab and slide accents; keep bypassed for the dry main riff"
     optional: true
-    description: "Optional plate ambience for selected stabs and slide textures. It is a practical substitute for the reported SRV-2000 plate setting, not the original unit."
 
 sound: >-
-  The main sound should be raw, punchy and mid-forward, with the Les Paul
-  pushing a loud Marshall-style amp into saturated crunch. Keep the core
-  riff comparatively dry and articulate. Use Digital Delay for the
-  opening figure and selected accents, then roll down the guitar volume
-  for the cleaner middle section. The recorded tone comes from the amp
-  rather than a separate distortion pedal.
+  The main tone should be saturated and forceful, with a strong
+  midrange, controlled low end and sharp pick attack. Keep the riff
+  dry and clearly articulated once the full band enters. The intro
+  uses an audible, rhythmic digital echo; selected stabs and slides
+  have a more spacious tail. In the quieter middle section, roll the
+  guitar volume down to clean up the same amp rather than switching
+  to a separate clean amp. Keep the tone responsive, not modern or
+  excessively compressed.
 
 beginner_route: >-
-  Start with Brit Plexi 100 Bright and 412 Brit 60B V30 ’95. Use the
-  bridge humbucker and set the amp for a saturated but clear rock tone.
-  Keep Digital Delay bypassed while setting the main riff. Add it for
-  the opening figure, then use your guitar volume to clean up the
-  middle section. Try Crying Wah only if you want a wah-led lead sound.
+  Start with Brit Plexi 100 Bright and 412 Brit 60B V30 ’95. Set a
+  mid-forward Marshall crunch, then play the main riff with the delay
+  bypassed. Add Digital Delay for the intro and Plate only for the
+  special accents. For the clean middle, roll down the guitar volume
+  while keeping the amp and cabinet unchanged.
 
 veteran_notes: >-
-  Slash said the Kris Derrig Les Paul arrived during the Appetite
-  overdubs and became his recording guitar. Gear notes identify a bridge Seymour Duncan Alnico II Pro humbucker,
-  a rented 100-watt Marshall Super Lead, a Marshall 1960 4x12 with
-  Vintage 30 speakers and E-flat standard tuning. Mike Clink recalled
-  a Frank Levi-modified Super Lead; other retrospective accounts differ
-  over the amp's S.I.R. stock number and modification, and a 2002
-  magazine sidebar recalls a Marshall Jubilee instead. Brit Plexi 100
-  Bright is the closest official Quad Cortex match to the Super Lead
-  family, but it does not reproduce the amp modification. Brit UBL
-  Lead is an available Silver Jubilee-based alternative if you want
-  to compare that conflicting account.
+  Guitar World reports a Kris Derrig-built 1959 Les Paul Standard
+  replica with a bridge Seymour Duncan Alnico II Pro humbucker,
+  tuned to E-flat standard, through a 1977 100-watt Marshall Model
+  1959 Super Lead modified by Frank Levi and Glenn Buckley. Other
+  accounts have debated whether the rented amp was a 1959 Super
+  Lead, a 1959T Tremolo or a pre-JCM800 2203. Its extra gain stage
+  and the original amp are not reproduced by the stock Quad Cortex
+  model. Brit Plexi 100 Bright is selected because it models the
+  Super Lead family; use it as a starting point, not an exact capture.
 
-  Guitar World reports these amp settings for the original setup:
-  Presence 8, Bass 5, Middle 8.5, Treble 7 and Volume 1 at 10, with
-  the guitar connected to Channel 1's top input. Treat these as
-  published historical settings, not guaranteed one-to-one values for
-  the Quad Cortex model. The Quad Cortex starting positions below are
-  practical adaptations.
+  The same song-specific account identifies a Marshall 1960 4x12
+  cabinet with Vintage 30 speakers. 412 Brit 60B V30 ’95 is a stock
+  Marshall 1960B/Vintage 30 model and a reasonable cabinet match,
+  but the original microphone placement and full studio chain are
+  not established here.
 
-  The Roland SRV-2000 was reportedly used in a special delay mode for
-  the intro, with 318 ms delay time, Feedback 30 and Output 50. For
-  selected stabs and slide effects, the published account describes
-  425 ms and an additional plate reverb setting. The amp-and-cab tone
-  remains mostly dry. No overdrive pedal is needed for the main sound;
-  Mike Clink also recalled getting the gain from the amp.
+  The Roland SRV-2000 was used in its secret delay mode on the intro.
+  The reported delay time is 318 ms with feedback at 30 and output
+  at 50; the unit was also used for selected stabs and slides at
+  about 425 ms with an additional plate reverb. Digital Delay and
+  Plate approximate those roles; their control scales and algorithms
+  are not the same as the original rack unit.
 
-  This recipe is a single playable signal path, not a reconstruction
-  of the original overdubs. Published accounts describe a complex
-  recorded guitar arrangement, so one Quad Cortex chain cannot
-  represent every layer. A Shure SM57 is associated with Clink's
-  Appetite amp recording approach; try a dynamic mic slightly off
-  centre as a practical cabinet starting point.
+  Slash described rolling his guitar volume down for the clean
+  middle. A six-string bass is also audible in the slower chord
+  section, so do not add excessive guitar bass in an attempt to
+  reproduce that low ringing sound. The settings below are practical
+  Quad Cortex proposals, not a recovered preset.
 
 before_you_build: >-
-  Tune to E-flat standard: E♭–A♭–D♭–G♭–B♭–E♭. Start with the bridge
-  humbucker and guitar volume fully up. The Derrig Les Paul and
-  Alnico II Pro pickup are documented in accounts of the recording,
-  but your own Les Paul-style guitar will work with suitable level
-  and EQ adjustments. Use the guitar volume control to create the
-  cleaner middle section. All Quad Cortex settings below are
-  starting points, not verified preset values.
+  This is an original, ear-led Quad Cortex recipe inspired by the
+  Appetite for Destruction studio recording. It is not an exact
+  reconstruction of the modified S.I.R. amp or the full recording
+  chain.
+
+  Tune to E-flat standard: Eb-Ab-Db-Gb-Bb-Eb, from low to high.
+  Start with a Les Paul-style guitar and bridge humbucker. The
+  recording used a Kris Derrig-built Les Paul replica with a bridge
+  Alnico II Pro pickup. Use the guitar volume control to clean up
+  the amp for the middle section; keep your guitar volume high while
+  setting the main distorted sound.
+
+  The recipe uses one serial signal chain. Digital Delay and Plate
+  are bypassed for the main riff and enabled only for the sections
+  described below. No parallel routing is required.
 
 build_intro: >-
-  Build the amp-and-cab tone first, then add the opening delay and
-  optional accents. The reported historical amp settings are included
-  in Veteran Notes; the values below adapt them for practical use
-  with a Quad Cortex model and comfortable output level.
+  The amp, cabinet and effect values are practical starting points,
+  not guaranteed reproductions of the recording. The original amp
+  was modified and its settings do not translate directly to the
+  Quad Cortex. Match output levels when comparing Scenes.
 
 build_steps:
-  - title: "Prepare the guitar"
+  - title: "Tune and prepare the guitar"
     description: >-
-      Tune to E-flat standard. Select the bridge humbucker and begin
-      with guitar volume fully up. A moderate-output humbucker is a
-      useful starting point. If your pickups are hotter than the
-      reported Alnico II Pro, reduce the amp input or guitar volume
-      slightly to preserve note definition.
+      Tune to E-flat standard (Eb-Ab-Db-Gb-Bb-Eb). Begin with a
+      Les Paul-style guitar and bridge humbucker. A medium-output
+      pickup is a useful starting point. Keep the guitar volume
+      fully open while setting the distorted tone.
 
   - title: "Set the Marshall-style amp"
     description: >-
-      Choose Brit Plexi 100 Bright. As practical starting points on a
-      0–10 scale, try Presence 8, Bass 5, Middle 8, Treble 7 and
-      Volume 1 around 7–8. The published original settings report
-      Volume 1 at 10; lower it if the Quad Cortex output becomes
-      unmanageable. Adjust the model's output separately to set
-      listening level. Keep the sound mid-forward rather than
-      scooping the mids.
+      Select Brit Plexi 100 Bright. Begin around Gain 7/10, Bass
+      4.5/10, Mid 7.5/10, Treble 6.5/10 and Presence 6/10 where
+      equivalent controls are available. Set output or master for
+      your monitoring level. These are practical values; the
+      reported settings on Slash’s modified amp were different and
+      are not direct Quad Cortex equivalents.
 
-  - title: "Choose the cabinet and microphone"
+  - title: "Choose the cabinet"
     description: >-
-      Select 412 Brit 60B V30 ’95. Start with a dynamic microphone
-      slightly off the speaker centre. If cabinet filtering is
-      available, try a low cut near 80 Hz and a high cut around
-      8 kHz. Treat these as mix-oriented starting points; exact
-      microphone placement is not confirmed.
+      Add 412 Brit 60B V30 ’95 after the amp. If microphone controls
+      are available, start with a dynamic microphone slightly off
+      the speaker centre. Try a low cut near 80 Hz and a high cut
+      around 8 kHz as initial targets. Adjust by ear; the exact
+      microphone and placement for this track are not confirmed.
 
-  - title: "Add optional compression"
+  - title: "Add an optional input push"
     description: >-
-      Neural Compressor is optional because the historical compressor
-      model and settings are unknown. If needed, use light compression
-      for control, with only a few decibels of gain reduction on
-      stronger notes. Match the bypassed and active levels so the
-      compressor does not act as an unreported boost.
+      If Brit Plexi 100 Bright does not provide enough sustain, place
+      the Gain block before the amp and start with a modest increase
+      of about 2 dB. This is a practical input-level adjustment, not
+      a pedal documented on the recording and not a substitute for
+      the original amp’s added gain stage. Bypass it if the tone
+      becomes harsh or compressed.
 
-  - title: "Set the opening delay"
+  - title: "Set the intro delay"
     description: >-
-      Engage Digital Delay for the opening figure. The published
-      account gives the Roland SRV-2000 delay time as 318 ms and
-      Feedback as 30. Use 318 ms and approximately 30% feedback as
-      starting values in the Quad Cortex. The source reports Output
-      50, but that control may not map directly to the Quad Cortex
-      mix parameter; begin with a restrained mix around 15–25% and
-      adjust by ear. Bypass the delay for the main riff.
+      Place Digital Delay after the cabinet. For the intro, begin at
+      318 ms, Feedback around 30% and Mix around 35-45% if those
+      controls are available. Raise the Mix only until the repeats
+      are clearly audible behind the picked notes. The reported
+      SRV-2000 Output value does not necessarily map directly to the
+      Quad Cortex Mix control.
 
-  - title: "Add optional plate ambience"
+  - title: "Add the accent reverb"
     description: >-
-      For selected stabs or slide textures, engage Plate after
-      Digital Delay. Start with a short-to-medium decay and a low
-      mix, around 8–12%. This is a practical approximation of the
-      reported plate setting, not a verified reproduction of the
-      original effect unit.
+      Place Plate after Digital Delay. Keep it bypassed for the main
+      riff. For the special stabs and slides, try a decay around
+      1.5-2.5 seconds and a Mix around 10-15% if available. These
+      are restrained starting points; the original unit’s Plate A
+      setting is not documented here.
 
-  - title: "Set the optional wah"
+  - title: "Set up the clean middle"
     description: >-
-      If using Crying Wah, place it before the amp and control it
-      with an expression pedal. Keep it bypassed for the core riff.
-      Slash used a Cry Baby for some leads, but the source evidence
-      does not firmly identify its use on this track's specific
-      lead passages.
+      Keep the amp and cabinet unchanged and bypass Digital Delay
+      and Plate. Roll the guitar volume down gradually, starting
+      around 3-5/10, until the amp cleans up while the notes remain
+      present. The recording uses this playing control for the
+      quieter middle section; do not switch to a different amp model.
+
+  - title: "Balance the Scenes"
+    description: >-
+      Use Scene A for the delayed intro, Scene B for the dry riff,
+      Scene C for the volume-rolled-back middle and Scene D for the
+      delay and plate accents. Keep the optional Gain block bypassed
+      initially. If you enable it, compare levels and preserve the
+      clean-up range when rolling down the guitar volume.
 
 scenes:
   - id: "A"
-    name: "Opening Delay"
+    name: "Intro Echo"
     description: >-
-      Use the core amp and cabinet tone with Digital Delay active
-      at approximately 318 ms and moderate feedback. Keep Plate
-      bypassed unless you want additional space. The delay is a
-      Quad Cortex substitute for the reported SRV-2000 delay mode.
+      Use Brit Plexi 100 Bright and 412 Brit 60B V30 ’95. Engage
+      Digital Delay at approximately 318 ms with moderate feedback
+      and a clearly audible but controlled Mix. Keep Plate bypassed.
+      This is a practical approximation of the SRV-2000 delay mode.
 
   - id: "B"
     name: "Main Riff"
     description: >-
-      Keep Brit Plexi 100 Bright and the cabinet active. Bypass
-      Digital Delay and Plate for the relatively dry, mid-forward
-      riff sound. Use the bridge humbucker and full guitar volume.
+      Keep the same amp and cabinet, with Digital Delay and Plate
+      bypassed. Use the main mid-forward crunch setting and a firm,
+      controlled pick attack. Keep the optional Gain block bypassed
+      unless the amp needs a small input push.
 
   - id: "C"
     name: "Clean Middle"
     description: >-
-      Keep the amp and cabinet settings unchanged and roll the
-      guitar volume down until the tone cleans up. The recording's
-      cleaner middle section is described as coming from Slash
-      reducing guitar volume, rather than changing to a separate
-      clean amplifier.
+      Keep the same amp and cabinet and bypass both effects. Roll the
+      guitar volume down until the amp cleans up, beginning around
+      3-5/10. This uses the reported guitar-volume technique rather
+      than a separate clean amp or a change in routing.
 
   - id: "D"
-    name: "Lead and Accents"
+    name: "Delay Accents"
     description: >-
-      Keep the core amp-and-cab tone. Engage Crying Wah only if
-      desired for lead phrasing. For selected stabs or slide
-      accents, use the optional delay and Plate settings; do not
-      leave those effects on for the whole song unless you prefer
-      a wetter interpretation.
+      For the selected stabs and slides, set Digital Delay near
+      425 ms with a restrained Mix and engage Plate at a low level.
+      Keep the main amp tone intact. These effect settings are
+      practical proposals, not recovered SRV-2000 control values.
 
 troubleshooting:
-  - problem: "The tone is too fizzy or harsh."
+  - problem: "The main riff sounds too muddy?"
     solution: >-
-      Lower Presence or Treble slightly and move the virtual
-      microphone farther off centre. Check that optional compression
-      is not exaggerating the attack.
+      Reduce Bass slightly, check the cabinet low cut and keep the
+      optional Gain block bypassed. The guitar should have weight
+      without masking the bass or losing pick definition.
 
-  - problem: "The main riff sounds too scooped."
+  - problem: "The amp is too fizzy or harsh?"
     solution: >-
-      Raise Middle or reduce Bass slightly. The reported Slash tone
-      is mid-forward, so keep the midrange present in the mix.
+      Reduce Presence first, then Treble if needed. Move the cabinet
+      microphone farther off the speaker centre if that control is
+      available. Avoid removing so much upper midrange that the
+      guitar loses its bite.
 
-  - problem: "The amp is too distorted or compressed."
+  - problem: "The intro delay overwhelms the notes?"
     solution: >-
-      Lower Volume 1 or reduce the guitar's output slightly. Do not
-      add an overdrive pedal to compensate; the intended core gain
-      comes from the Marshall-style amp model.
+      Lower Digital Delay Mix before changing the time. Keep the
+      repeats audible behind the picked notes rather than louder
+      than the original attack.
 
-  - problem: "The middle section will not clean up."
+  - problem: "The clean middle does not clean up?"
     solution: >-
-      Roll the guitar volume down further and check that Neural
-      Compressor is bypassed or set lightly. If the pickups are
-      especially hot, lower the input level into the amp.
+      Check that the guitar volume is actually reducing the input
+      level. Bypass the optional Gain block, lower amp Gain slightly
+      if needed and confirm the amp remains responsive to the guitar
+      volume control.
 
-  - problem: "The opening delay washes out the riff."
+  - problem: "The delay accents sound too wet?"
     solution: >-
-      Bypass Digital Delay outside the opening figure or lower its
-      mix and feedback. Keep Plate reserved for selected accents
-      rather than leaving it active across the whole song.
+      Reduce Digital Delay Mix and Plate Mix. Use the longer delay
+      and reverb only for the accent parts, not the dry main riff.
 
+  - problem: "The scenes change volume too much?"
+    solution: >-
+      Match perceived output levels between Scenes A, B and D.
+      Preserve the guitar-volume clean-up in Scene C and avoid using
+      amp Gain as a substitute for output-level balancing.
 ---
