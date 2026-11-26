@@ -14,9 +14,9 @@ draft: false
 # The original rotating speaker was a separate amplification path.
 
 chain:
-  - name: "COMPRESSOR"
+  - name: "Opto Comp"
     type: "compressor"
-    description: "Optional light levelling"
+    description: "Optional gentle compression and level control"
     optional: true
 
   - name: "FUZZ PI"
@@ -173,13 +173,13 @@ build_steps:
 
   - title: "Add optional compression"
     description: >-
-      A compressor is not essential because the
-      fuzz already provides considerable sustain.
-      If desired, choose a gentle compressor and
-      place it before Fuzz Pi. Start with light
-      compression and unity output level.
-      Bypass it if the attack becomes too flat
-      or the noise floor increases noticeably.
+      Opto Comp is an optional starting point for
+      gentle compression before Fuzz Pi. It is not
+      essential because the fuzz already provides
+      considerable sustain. Begin with light
+      compression and match the output level.
+      Bypass the compressor if the pick attack
+      becomes too flat or unwanted noise increases.
 
   - title: "Set the Fuzz Pi"
     description: >-

@@ -28,11 +28,11 @@ chain:
     type: "delay"
     description: "Clean path: Echoplex-style echoes"
 
-  - name: "ROL JAZZ CH120"
+  - name: "Rols Jazz CH120"
     type: "amp"
     description: "Clean path: bright amp substitute"
 
-  - name: "212 ROL JAZZ '87"
+  - name: "212 Rols Jazz ’87"
     type: "cab"
     description: "Clean path: clean speaker tone"
 
@@ -76,8 +76,8 @@ routing:
       blocks:
         - "FLANGERISH"
         - "TAPE DELAY"
-        - "ROL JAZZ CH120"
-        - "212 ROL JAZZ '87"
+        - "Rols Jazz CH120"
+        - "212 Rols Jazz ’87"
 
     - id: "B"
       name: "Heavy Rhythm"
