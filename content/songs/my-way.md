@@ -13,7 +13,7 @@ draft: false
 # Two alternative paths within one Quad Cortex preset.
 # The list below shows the devices, not a single serial route.
 #
-# CLEAN: Flangerish > Tape Delay > Rol Jazz CH120 > 212 Rol Jazz
+# CLEAN: Flangerish > Tape Delay > Rol Jazz CH120 > 212 Rols Jazz
 # HEAVY: Simple Gate > CA Duo Ch3 Modern > 412 CA Stand OS
 #
 # Split the guitar input into two paths and switch
@@ -121,7 +121,7 @@ sound: >-
 # BEGINNER ROUTE
 
 beginner_route: >-
-  Build the clean sound first. Start with Rol Jazz
+  Build the clean sound first. Start with Rols Jazz
   CH120 and its matching 2x12 cabinet. Keep the amp
   clean and bright. Add Flangerish before the amp
   and experiment with a slow-to-moderate rate and
@@ -175,7 +175,7 @@ veteran_notes: >-
 
   The original Selmer Zodiac Twin 30 is not
   represented by a dedicated stock Quad Cortex
-  amplifier model. Rol Jazz CH120 is therefore
+  amplifier model. Rols Jazz CH120 is therefore
   selected for its clean headroom and bright
   response, not because it models the Selmer.
   It should be treated as a functional substitute.
@@ -285,8 +285,8 @@ build_steps:
 
   - title: "Build the clean amplifier sound"
     description: >-
-      On the clean path, add Rol Jazz
-      CH120 followed by 212 Rol Jazz
+      On the clean path, add Rols Jazz
+      CH120 followed by 212 Rols Jazz
       '87. Keep the amplifier clean.
       As a tonal target, begin with
       moderate Bass, moderately strong
@@ -409,7 +409,7 @@ scenes:
     name: "Warped Clean"
     description: >-
       Use the Flangerish, Tape Delay,
-      Rol Jazz CH120 and 212 Rol
+      Rols Jazz CH120 and 212 Rols
       Jazz '87 path. Silence the
       heavy amplifier branch.
       Keep the sound bright

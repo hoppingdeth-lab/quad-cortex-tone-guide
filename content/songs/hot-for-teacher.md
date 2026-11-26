@@ -439,8 +439,7 @@ scenes:
     description: >-
       Retain the same amplifier
       and cabinet sound with
-      slightly more output
-      presence if needed.
+      slightly more output-level lift if needed.
       Optionally enable
       a quiet Tape Delay.
       Keep saturation under

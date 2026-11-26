@@ -21,7 +21,7 @@ chain:
 
   - name: "Parametric-3"
     type: "eq"
-    description: "Practical post-amp EQ approximation of the B&B unit Rasmussen placed in the amp loop"
+    description: "Practical post-amp EQ inspired by the B&B unit Rasmussen placed in the amp loop"
 
   - name: "412 CA Custom A Shadow 87"
     type: "cab"

@@ -61,10 +61,7 @@ veteran_notes: >-
   the physical pickup wiring.
 
 before_you_build: >-
-  Tune to standard E–A–D–G–B–E. A CD-based measurement places the album
-  slightly flat of A=440, so if the preset sounds sharp against the
-  recording, lower the tuning by ear or use a tuner to match that pitch.
-  Start with the Red Special pickup combinations described above. If your
+  Tune to standard E–A–D–G–B–E.Start with the Red Special pickup combinations described above. If your
   guitar cannot select two pickups out of phase, use the closest available
   combination and expect the solo tone to differ. These settings and
   suggested values are practical starting points, not recovered studio
