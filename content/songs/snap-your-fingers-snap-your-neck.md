@@ -109,7 +109,7 @@ beginner_route: >-
 
 veteran_notes: >-
   Prong's Cleansing album was produced
-  by Terry Date and released in 1994.
+  by Terry Date and Prong, and released in 1994.
   Its sound combines groove metal,
   hardcore aggression and industrial
   rhythmic influences.

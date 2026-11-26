@@ -3,7 +3,7 @@ title: "Knife Prty"
 artist: "Deftones"
 album: "White Pony (2000)"
 description: "Stephen Carpenter-inspired Drop C rhythm tone with a dense low end, firm pick attack and dark, sustained high gain."
-tuning: "Drop C (C-G-C-F-A-D); Carpenter's White Pony seven-string also had an extra high-E drone string above the six-string tuning"
+tuning: "Drop C (C-G-C-F-A-D)"
 guitar: "Standard-scale ESP seven-string with a bridge humbucker; a six-string in Drop C covers the main guitar range"
 playing_style: "Heavy, controlled picking; tight muting on the low C string; let chord accents and sustained notes ring"
 tone_type: "High Gain"
@@ -40,8 +40,7 @@ sound: >-
   longer notes retain sustain. This recipe targets Carpenter's amplified
   rhythm part rather than every guitar and studio texture on the record.
   A restrained Flangerish setting can add slow movement to evoke the
-  swirling guitar character described for the song; bypass it if it
-  blurs the riff or low-string attack.
+  swirling guitar character in the song.
 
 beginner_route: >-
   Tune to Drop C and start with Brit 2203 into 412 Brit 60A G75 80s.
@@ -74,9 +73,7 @@ veteran_notes: >-
   placement.
 
   Brit 2203 is Neural DSP's JCM800 model. It is a suitable stock
-  Marshall-family starting point, but it is not proof that a JCM800
-  was used on the recording. The selected Marshall cabinet is likewise
-  a practical substitute. The TC FireworX and Rocktron Replifex were
+  Marshall-family starting point. The TC FireworX and Rocktron Replifex were
   era equipment; no particular Quad Cortex effects have been added to
   imitate them without track-specific evidence.
 
