@@ -36,18 +36,13 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
-
 <body>
 
-{{ partial "header.html" . }}
-
+  {{ partial "header.html" . }}
   <main class="container">
-
     <section class="hero">
       <div class="eyebrow">Quad Cortex Tone Recipes</div>
-
       <h1>Build the recipe<br>Create the sound</h1>
-
       <p>
         Song-inspired ‘Recipes’ for building Quad Cortex signal chains, featuring practical amp and effects settings alongside step-by-step guides to help you cook great guitar tones.
       </p>    
@@ -58,7 +53,6 @@
   </div>
   <div class="featured-recipes-heading">
     <h2>Popular Recipes</h2>
-
     <div class="featured-recipes-controls">
       <button
         type="button"
@@ -67,7 +61,6 @@
         aria-label="Scroll recipes left">
         &#8592;
       </button>
-
       <button
         type="button"
         class="featured-scroll-button"
@@ -77,45 +70,29 @@
       </button>
     </div>
   </div>
-
   <div class="featured-recipes-track" id="featured-recipes-track">
-
     {{ range (where site.RegularPages "Section" "songs") }}
-
     <a class="recipe-card" href="{{ .RelPermalink }}">
-
       <div class="recipe-card-artist">
         {{ .Params.artist }}
       </div>
-
       <h3>{{ .Title }}</h3>
-
       <p>{{ .Params.description }}</p>
-
       <div class="recipe-card-footer">
-
         <span>{{ len .Params.chain }} BLOCKS</span>
-
         <span class="recipe-card-arrow">&rarr;</span>
-
       </div>
-
     </a>
-
     {{ end }}
 
   </div>
-
   <p class="featured-scroll-hint">
     Scroll to explore more tone recipes
   </p>
-
   <a href="/songs/" class="button">
     View All Recipes
   </a>
-
 </section>
-
     <section class="card">
       <div class="eyebrow">Coming soon</div>
       <h2>The Complete Quad Cortex Tone Guide</h2>
@@ -124,26 +101,19 @@
         chains, detailed settings and practical tone-building advice.
       </p>
     </section>
-
   </main>
-
 {{ partial "footer.html" . }}
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById("featured-recipes-track");
     const prev = document.getElementById("featured-prev");
     const next = document.getElementById("featured-next");
-
     if (!track || !prev || !next) return;
-
     function scrollCards(direction) {
       const card = track.querySelector(".recipe-card");
       if (!card) return;
-
       const gap = parseFloat(getComputedStyle(track).gap) || 0;
       const distance = card.getBoundingClientRect().width + gap;
-
       track.scrollBy({
         left: direction * distance,
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -151,16 +121,13 @@
           : "smooth"
       });
     }
-
     prev.addEventListener("click", function () {
       scrollCards(-1);
     });
-
     next.addEventListener("click", function () {
       scrollCards(1);
     });
   });
 </script>
-
 </body>
 </html>

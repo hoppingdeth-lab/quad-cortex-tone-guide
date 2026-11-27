@@ -178,6 +178,7 @@ footer {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   margin: 24px 0;
+  align-items: start;
 }
 
 .guide-panel {
@@ -1931,4 +1932,15 @@ body:has(a[href^="mailto:"]) main a[href^="mailto:"]:hover {
   .build-step-toggle {
     min-height: 44px;
   }
+}
+
+/* Beginner Route and Veteran Notes paragraph spacing */
+
+.guide-panel-text p {
+  margin: 0 0 16px;
+  line-height: 1.75;
+}
+
+.guide-panel-text p:last-child {
+  margin-bottom: 0;
 }

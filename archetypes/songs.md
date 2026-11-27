@@ -11,7 +11,6 @@ draft: true
 
 # SIGNAL CHAIN
 # Add, remove or rearrange blocks to match the recipe.
-
 chain:
   - name: "BLOCK 1 NAME"
     type: "amp"
@@ -139,5 +138,4 @@ troubleshooting:
 
   - problem: "Too muddy?"
     solution: "ENTER THE RECOMMENDED ADJUSTMENT."
-
 ---

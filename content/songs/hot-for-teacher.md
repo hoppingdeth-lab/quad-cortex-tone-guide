@@ -4,7 +4,7 @@ artist: "Van Halen"
 album: "1984 (1984)"
 description: "Edward Van Halen's explosive brown sound: a roaring Plexi, articulate tapped notes, swinging shuffle riffs and dynamic clean passages."
 tuning: "Standard (E-A-D-G-B-E)"
-guitar: "Gibson Flying V-style or other humbucker guitar; bridge pickup for riffs, neck pickup for quieter passages"
+guitar: "Originally recorded on a Gibson Flying V, use a humbucker guitar; bridge pickup for riffs, neck pickup for quieter passages"
 playing_style: "Fast two-handed tapping, aggressive shuffle riffing, palm muting, legato, harmonics and wide controlled vibrato"
 tone_type: "Crunch"
 draft: false
@@ -40,135 +40,45 @@ chain:
 # THE SOUND
 
 sound: >-
-  An explosive, harmonically rich hard-rock guitar
-  sound with a strong midrange, lively upper
-  harmonics and a loose but controlled low end.
+  An explosive, harmonically rich hard-rock guitar sound with a strong midrange, lively upper harmonics and a loose but controlled low end.
 
-  The tone has more saturation than a traditional
-  blues-rock crunch, yet it remains open and
-  highly responsive to playing dynamics. Fast
-  picked notes should be distinct, tapped notes
-  should speak clearly and the main shuffle
-  riff should feel punchy and rhythmically alive.
+  The tone has more saturation than a traditional blues-rock crunch, yet it remains open and highly responsive to playing dynamics. Fast picked notes should be distinct, tapped notes should speak clearly and the main shuffle riff should feel punchy and rhythmically alive. 
 
-  The amplifier produces a warm, roaring
-  distortion rather than the dense compression
-  of a modern high-gain amplifier.
+  The amplifier produces a warm, roaring distortion rather than the dense compression of a modern high-gain amplifier.
 
-  The quieter passages provide a striking
-  contrast, using a lower guitar volume and
-  a softer pickup response to clean up the
-  same basic amplifier sound.
-
-  This recipe targets the original studio
-  recording on Van Halen's 1984 album,
-  rather than a later live performance.
+  The quieter passages provide a striking contrast, using a lower guitar volume and a softer pickup response to clean up the
+  same basic amplifier sound. 
+  
+  This recipe targets the original studio recording on Van Halen's 1984 album, rather than a later live performance.
 
 # BEGINNER ROUTE
 
-beginner_route: >-
-  Start with only Brit Plexi 100 Patch and
-  412 Brit 60B GB '71. Leave the phaser,
-  delay and reverb bypassed.
+beginner_route: |-
+  Start with only Brit Plexi 100 Patch and 412 Brit 60B GB '71. Leave the phaser, delay and reverb bypassed.
 
-  Select a bridge humbucker and set the
-  amplifier for a strong, crunchy distortion.
-  The aim is a warm, harmonically rich
+  Select a bridge humbucker and set the amplifier for a strong, crunchy distortion. The aim is a warm, harmonically rich
   sound that responds to how hard you pick.
 
-  Play a simple A power chord and listen
-  for a clear initial attack followed by
-  a lively, sustained decay. Next, try
-  the main shuffle rhythm. If the
-  individual notes become blurred,
-  reduce the amplifier drive slightly.
+  Play a simple A power chord and listen for a clear initial attack followed by a lively, sustained decay. Next, try the main shuffle rhythm. If the individual notes become blurred, reduce the amplifier drive slightly.
 
-  Do not add an overdrive pedal initially.
-  The original Marshall-style amplifier
-  character is the foundation of the sound.
+  Do not add an overdrive pedal initially. The original Marshall-style amplifier character is the foundation of the sound.
 
-  Once the main riff feels convincing,
-  experiment with a tiny amount of room
-  ambience. Add subtle phasing or delay
-  only if they improve the result.
+  Once the main riff feels convincing, experiment with a tiny amount of room ambience. Add subtle phasing or delay only if they improve the result.
 
-  For quieter passages, switch to the
-  neck pickup and lower the guitar volume.
-  This should clean up the amplifier
-  without needing a separate clean amp.
+  For quieter passages, simply lower the guitar volume. This should clean up the amplifier without needing a separate clean amp.
 
 # VETERAN NOTES
 
-veteran_notes: >-
-  Eddie Van Halen confirmed in a retrospective
-  Guitar World interview that he used his
-  1958 Gibson Flying V on Hot for Teacher.
-  He also described recording the 1984 album
-  through his longstanding Marshall amplifier
-  and a single 4x12 cabinet at 5150 Studios.
+veteran_notes: |-
+  Eddie Van Halen confirmed in a retrospective Guitar World interview that he used his 1958 Gibson Flying V on Hot for Teacher. He also described recording the 1984 album through his longstanding Marshall amplifier and a single 4x12 cabinet at 5150 Studios.   Although Eddie's Frankenstein and Kramer guitars are strongly associated with his image, the Flying V is a particularly important historical detail for this song.
 
-  Although Eddie's Frankenstein and Kramer
-  guitars are strongly associated with his
-  image, the Flying V is a particularly
-  important historical detail for this song.
+  The original amplifier belonged to Eddie's well-known modified Marshall setup. Exact settings, operating voltage and internal modifications should not be assumed from generic internet diagrams. Brit Plexi 100 Patch is based on a Marshall Super Lead 100 and is a practical stock Quad Cortex approximation, not a recreation of every modification to Eddie's personal amplifier. The selected 412 Brit 60B GB '71 is based on a Marshall 1960B with Pulsonic Greenback speakers. It offers an appropriate vintage British cabinet character, but the exact cabinet, loudspeakers and microphone positions used on Hot for Teacher are not fully documented.
 
-  The original amplifier belonged to Eddie's
-  well-known modified Marshall setup. Exact
-  settings, operating voltage and internal
-  modifications should not be assumed from
-  generic internet diagrams. Brit Plexi 100
-  Patch is based on a Marshall Super Lead
-  100 and is a practical stock Quad Cortex
-  approximation, not a recreation of every
-  modification to Eddie's personal amplifier.
+  Eddie was known for using MXR phase effects and echo during his career. However, their precise application to the recorded Hot for Teacher guitar tracks is not established. MX Phase 95 and Tape Delay are therefore optional tonal additions rather than mandatory parts of an authenticated rig.
 
-  The selected 412 Brit 60B GB '71 is based
-  on a Marshall 1960B with Pulsonic
-  Greenback speakers. It offers an
-  appropriate vintage British cabinet
-  character, but the exact cabinet,
-  loudspeakers and microphone positions
-  used on Hot for Teacher are not fully
-  documented in the cited material.
+  Contemporary accounts indicate that the quieter passages were recorded with the Flying V's neck pickup and its volume turned down. This supports using guitar volume and pickup selection to change the sound rather than relying on a second amplifier. The celebrated brown sound is not simply maximum preamp gain. Much of its character comes from power-amp response, speaker colour, controlled saturation and Eddie's extraordinary touch and timing.
 
-  Eddie was known for using MXR phase
-  effects and echo during his career.
-  However, their precise application to
-  the released Hot for Teacher guitar
-  tracks is not established here.
-  MX Phase 95 and Tape Delay are therefore
-  optional tonal additions rather than
-  mandatory parts of an authenticated rig.
-
-  Contemporary accounts indicate that
-  the quieter passages were recorded
-  with the Flying V's neck pickup and
-  its volume turned down. This supports
-  using guitar volume and pickup selection
-  to change the sound rather than relying
-  on a second amplifier.
-
-  The celebrated brown sound is not
-  simply maximum preamp gain. Much of
-  its character comes from power-amp
-  response, speaker colour, controlled
-  saturation and Eddie's extraordinary
-  touch and timing.
-
-  The original recording also includes
-  studio engineering by Donn Landee.
-  Microphone placement, tracking and
-  mixing contribute to the finished
-  sound and cannot be reproduced
-  exactly by one signal chain.
-
-  For advanced experimentation,
-  compare the patched Plexi model
-  with Brit Plexi 100 Bright and
-  alternative vintage Marshall
-  cabinet captures or impulse responses.
-  Match loudness carefully before
-  judging which combination is closer.
+  For advanced experimentation, compare the patched Plexi model with Brit Plexi 100 Bright and alternative vintage Marshall cabinet captures or impulse responses. Match loudness carefully before judging which combination is closer.
 
 # BEFORE YOU BUILD
 

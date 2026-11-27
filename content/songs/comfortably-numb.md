@@ -1,330 +1,138 @@
 ---
 title: "Comfortably Numb"
 artist: "Pink Floyd"
-album: "The Wall (1979)"
-description: "David Gilmour's soaring 1979 studio outro tone, with Big Muff sustain, a clean Hiwatt-style amplifier and subtle rotary movement."
+album: "The Wall"
+description: "A song-wide electric guitar recipe for Comfortably Numb, from a clean, spacious slide approximation to Gilmour's sustained Strat lead tones."
 tuning: "Standard (E-A-D-G-B-E)"
-guitar: "Stratocaster-style guitar with a bridge single-coil pickup"
-playing_style: "Expressive lead playing, wide controlled bends, slow vibrato and sustained melodic phrasing"
+guitar: "Strat-style guitar with single-coil pickups. A hotter bridge pickup is useful; use bridge and neck together for the first solo, then bridge alone for the final solo."
+playing_style: "Play with a firm pick attack, controlled bends, wide vocal vibrato and deliberate note spacing. Use slide and volume swells for the clean intro approximation."
 tone_type: "Classic Rock"
 draft: false
-
-# SIGNAL CHAIN
-# A practical single-path approximation of the studio rig.
-# The original rotating speaker was a separate amplification path.
 
 chain:
   - name: "Opto Comp"
     type: "compressor"
-    description: "Optional gentle compression and level control"
-    optional: true
+    description: "Stock compressor used as an ear-led substitute for the MXR Dyna Comp. Apply moderate compression before the fuzz to help sustain lead notes."
 
-  - name: "FUZZ PI"
+  - name: "Fuzz Pi"
     type: "fuzz"
-    description: "Big Muff-style sustain"
+    description: "Stock Big Muff Pi model. Keep its output moderate and let the amp add body; bypass it for the clean intro approximation."
 
-  - name: "WATT CUSTOM CLEAN"
+  - name: "Watt D103 Normal"
     type: "amp"
-    description: "Clean, powerful amp foundation"
+    description: "Stock Hiwatt DR103 model. Set it clean to just breaking up so the fuzz supplies most of the lead sustain."
 
-  - name: "412 WATT S4123"
+  - name: "412 Watt S4123"
     type: "cab"
-    description: "Hiwatt-style 4x12 speaker tone"
+    description: "Stock Hiwatt SE4123 4x12 cabinet model. This is a practical substitute for the original WEM cabinet and Fane speakers."
 
-  - name: "ROTARY"
+  - name: "Rotary"
     type: "modulation"
-    description: "Subtle rotating-speaker movement"
+    description: "Subtle, slow rotary movement to suggest the Yamaha RA-200 colour. This sits in series after the cabinet as an approximation of the original parallel amp and rotating-speaker setup."
 
-  - name: "DIGITAL DELAY"
+  - name: "Doubler"
+    type: "utility"
+    optional: true
+    description: "Optional, restrained stereo width to suggest the reported automatic double tracking. Keep bypassed if the output is mono or the doubled sound becomes phasey."
+
+  - name: "Digital Delay"
     type: "delay"
-    description: "Optional spacious repeats"
-    optional: true
+    description: "Clean digital delay for the long intro-style repeats and the more restrained lead ambience. Change mix and feedback by Scene."
 
-  - name: "PLATE"
+  - name: "Hall"
     type: "reverb"
-    description: "Optional studio-style ambience"
-    optional: true
-
-# THE SOUND
+    description: "Practical hall reverb approximation for the spacious steel-like intro and the sustained lead tail. Keep the solo settings below the delay in prominence."
 
 sound: >-
-  A singing, sustained lead tone with a firm pick attack,
-  rich midrange and a smooth, almost vocal quality.
-  The Big Muff supplies the saturation and compression,
-  while a powerful, relatively clean amplifier keeps the
-  notes defined. A gentle rotating-speaker character adds
-  movement without sounding like an obvious chorus.
-  The result should feel large and expressive, with long
-  notes that bloom and bends that remain articulate.
-  This recipe targets the second, outro solo on the
-  original 1979 studio recording, rather than the
-  heavier and more expansive later live versions.
+  The lead sound should be clear and expressive before it is heavily distorted: a firm Strat attack, rounded mids, singing sustain and wide vibrato. The Big Muff and clean Hiwatt model combine for a smooth, assertive lead rather than a sharply gated fuzz tone. The first solo should feel fuller; the final solo should cut more clearly. A clean, slide-friendly scene with long repeats approximates the intro's sustained atmosphere. The original acoustic and pedal-steel performances remain separate parts.
 
-# BEGINNER ROUTE
+beginner_route: |-
+  Build the clean Hiwatt-style amp and cabinet first. Add the Fuzz Pi for the lead scenes and use the Opto Comp gently before it. Set up the intro Scene with the fuzz bypassed and more delay and reverb. 
+  
+  The Rotary should be felt as gentle movement, not heard as an obvious wobble.
 
-beginner_route: >-
-  Start with just three essential blocks: Fuzz Pi,
-  Watt Custom Clean and 412 Watt S4123.
-  Use a Stratocaster-style bridge pickup and set the
-  amplifier almost clean. Let the fuzz create the
-  sustain rather than turning up the amplifier gain.
+veteran_notes: |-
+  The documented rig for the solos includes Gilmour's black 1969 Strat, a modified Hiwatt DR103, an Electro-Harmonix Big Muff Pi, an MXR Dyna Comp and a Yamaha RA-200 revolving speaker system. The Hiwatt and Yamaha systems were run in parallel. This recipe uses a serial Rotary block after the cabinet as a simpler tonal approximation; it does not reproduce that original split. 
+  
+  The stock 412 Watt S4123 is based on a Hiwatt SE4123, while the reported recording cabinet was a WEM Super Starfinder 200 with Fane Crescendo speakers. Opto Comp is a general stock substitute, not a Dyna Comp model. 
+  
+  The steel intro and modified-Nashville acoustic rhythm are separate performances; use an acoustic guitar for the rhythm part and a
+  slide with volume swells for the closest one-guitar intro approximation. 
+  
+  Doubler is optional and requires CorOS 3.0 or later.
 
-  First make single notes sound full and smooth.
-  Adjust the fuzz tone until the high notes sing
-  without becoming sharp. Then add a little Rotary
-  movement. Add delay or reverb only if the dry
-  sound feels too small.
-
-  Do not chase maximum distortion. The goal is
-  sustain, note separation and expressive dynamics.
-  Clear bends and controlled vibrato will make a
-  bigger difference than adding more effects.
-
-# VETERAN NOTES
-
-veteran_notes: >-
-  The Wall-era recording rig is strongly associated
-  with Gilmour's Black Strat, a Big Muff, Hiwatt
-  amplification, WEM speaker cabinets and a Yamaha
-  RA-200 rotating speaker system. Published gear
-  analyses identify the Strat's bridge pickup for
-  the second Comfortably Numb solo.
-
-  The original amplifier and speaker arrangement
-  was more complex than the single signal path
-  shown here. In particular, the Yamaha rotating
-  speaker contributed a separate, moving sound
-  alongside the main guitar amplification.
-  The Quad Cortex Rotary block is an ear-led
-  substitute, not a model of that complete rig.
-
-  Watt Custom Clean is based on a modified
-  Hiwatt-family amplifier, not the exact
-  original DR103. The 412 Watt S4123 is likewise
-  a practical Hiwatt-style cabinet substitute,
-  rather than the original WEM and Fane combination.
-
-  Guitar World's published equipment analysis
-  includes an MXR Dyna Comp in the studio-era
-  signal chain. A compressor is therefore offered
-  as an optional block, although the Big Muff already
-  supplies substantial compression.
-
-  Delay and Plate reverb are optional modern
-  conveniences for recreating the sense of space.
-  Their precise settings are not presented as
-  verified 1979 recording-session settings.
-
-  If you want a closer approximation of the
-  Yamaha system, experiment with parallel routing
-  and a dedicated rotary-flavoured path, matching
-  the levels carefully. For a simple preset,
-  the serial chain here is more approachable.
-
-# BEFORE YOU BUILD
-
-before_you_build: >-
-  This is an original, ear-led Quad Cortex recipe
-  inspired by the 1979 studio recording. It is not
-  an exact recreation of the original recording
-  chain or a downloadable Neural Capture.
-
-  Tune to standard E-A-D-G-B-E. Select the bridge
-  pickup on a Stratocaster-style guitar.
-  A moderately powerful bridge single-coil is
-  ideal, but a conventional Strat pickup can
-  work with some EQ adjustment.
-
-  If using humbuckers, reduce the fuzz level or
-  sustain as needed and consider trimming bass.
-  Keep the guitar volume fully open while making
-  the initial settings.
-
-  This is a lead tone. Use monitoring at a
-  comfortable level and match the output volume
-  when comparing different settings.
-
-# BUILD INTRODUCTION
+before_you_build: |-
+  Tune the electric guitar to Standard E. A Strat-style guitar is the closest practical starting point; a hotter bridge pickup helps the final solo, while bridge plus neck together gives the first solo more body. 
+  
+  The source rig's bridge pickup and pickup switching are specific, so use the nearest available combinations on your guitar. The original acoustic rhythm part uses a modified Nashville tuning, not Standard E; it is not built into this electric preset.
 
 build_intro: >-
-  These are suggested starting points rather than
-  documented studio control settings. Values
-  expressed from 0 to 10 are approximate targets;
-  the available controls and ranges may differ
-  between Quad Cortex devices.
-
-  Build the dry fuzz, amplifier and cabinet sound
-  first. Add movement and ambience afterwards.
-  The most important test is whether sustained
-  notes remain musical during bends and vibrato.
-
-# STEP-BY-STEP BUILD
+  These are practical starting points, not verified Quad Cortex settings from
+  the recording. Match levels between Scenes, then adjust by ear for your
+  guitar, monitoring system and playing volume.
 
 build_steps:
   - title: "Prepare the guitar"
     description: >-
-      Tune to standard E-A-D-G-B-E. Select the
-      bridge single-coil pickup and begin with
-      the guitar volume fully open. Use a firm
-      but controlled pick attack. Start with
-      moderate playing dynamics so you can hear
-      whether the fuzz compresses the notes
-      naturally.
+      Tune to Standard E. Use a Strat-style guitar if available. Set the guitar volume fully up and begin with the bridge pickup. For the first solo, select bridge plus neck if your guitar permits it; for the final solo, return to bridge alone.
 
-  - title: "Add optional compression"
+  - title: "Set up the Hiwatt-style amplifier"
     description: >-
-      Opto Comp is an optional starting point for
-      gentle compression before Fuzz Pi. It is not
-      essential because the fuzz already provides
-      considerable sustain. Begin with light
-      compression and match the output level.
-      Bypass the compressor if the pick attack
-      becomes too flat or unwanted noise increases.
+      Add Watt D103 Normal and keep it clean, with only a little edge when you strike hard. As a starting point, try Volume 4.5, Bass 5, Mid 4, Treble 5, Presence 5 and Master 5 on a 0–10-style scale; use the output control to match the bypassed level. These are practical starting positions.
 
-  - title: "Set the Fuzz Pi"
+  - title: "Choose the cabinet"
     description: >-
-      Choose Fuzz Pi, the Quad Cortex Big Muff
-      model. Begin with Sustain around 6/10,
-      Tone around 5.5/10 and Volume adjusted
-      to achieve a healthy, controlled level.
-      These are approximate starting positions.
-      Listen for a thick singing note rather
-      than a harsh, spluttering fuzz.
-      If sustain is already plentiful, reduce
-      Sustain before adding more compression.
+      Place 412 Watt S4123 after the amp. Start with a dynamic microphone near the speaker cap edge and slightly off axis if those controls are available. A low cut around 80 Hz and high cut around 7.5 kHz can help keep the lead focused; adjust these by ear. The original cabinet was reported as a WEM 4x12 with Fane speakers, so this is a related-family substitute. 
 
-  - title: "Set Watt Custom Clean"
+  - title: "Add compression and fuzz"
     description: >-
-      Choose Watt Custom Clean. Keep the amp
-      relatively clean and high-headroom.
-      As an approximate starting point, try
-      Gain or input drive around 3.5/10,
-      Bass 5/10, Mid 5.5/10, Treble 5/10
-      and Presence 4.5/10 where those controls
-      are available. Use the appropriate
-      output or master control to match volume.
-      The fuzz should supply most of the
-      distortion. Adjust by ear rather than
-      treating these values as exact settings
-      for every amp parameter.
+      Put Opto Comp before Fuzz Pi. Use moderate compression and set its output so engaging it does not cause a large volume jump; aim for sustain without flattening the pick attack. For Fuzz Pi, begin near Volume 4, Tone 6 and Sustain 6 if the controls use a 0–10 scale, then balance its output to the clean amp. Those positions reflect reported Big Muff settings.
 
-  - title: "Choose the speaker cabinet"
+  - title: "Add rotary movement"
     description: >-
-      Select 412 Watt S4123. Start with a
-      dynamic microphone, positioned a little
-      away from the speaker centre. If the
-      cabinet block offers low and high cuts,
-      try approximately 80 Hz and 7 kHz.
-      Treat these as initial EQ targets,
-      not fixed rules. Move the microphone
-      or lower the high cut if the top end
-      sounds brittle. Keep enough midrange
-      for bends to project clearly.
+      Place Rotary after the cabinet. Use a slow speed and low mix, around 10–15% as an initial ear-led range. It should add a slight moving, midrange thickness to sustained notes. Reduce the mix if the pitch movement becomes obvious or distracts from bends.
 
-  - title: "Add rotating-speaker movement"
+  - title: "Set delay and reverb"
     description: >-
-      Add the Rotary modulation block after
-      the cabinet in this simplified chain.
-      Start with a slow speed and a restrained
-      mix of approximately 10-15 percent,
-      where a mix control is available.
-      The effect should provide a gentle
-      moving texture rather than a pronounced
-      swirling sound. Increase it slightly
-      for a more spacious interpretation.
-      This is an approximation of the
-      Yamaha RA-200 contribution, not a
-      reproduction of its original routing.
+      Put Digital Delay before Hall. For the intro approximation, start around 500 ms delay time, 30% feedback and 20% mix; try a 4-second hall with 15–20% mix. For the solo Scenes, reduce the delay to roughly 400–430 ms, feedback to about 15–20% and mix to 10–14%; try a 2–3-second hall at 8–12% mix. These are ear-led settings: the precise delay and reverb configuration in the original mix is not established.
 
-  - title: "Add optional digital delay"
+  - title: "Add optional stereo width"
     description: >-
-      Add Digital Delay after Rotary if the
-      tone needs more space. Try a delay time
-      around 370-430 ms, Feedback 15-20
-      percent and Mix 10-15 percent.
-      Start with 400 ms and two or three
-      quiet audible repeats. These values
-      are modern suggested settings, not
-      verified studio delay measurements.
-      Bypass the delay if it obscures the
-      phrasing or makes fast passages unclear.
+      Add Doubler only if you have CorOS 3.0 or later and a stereo output path. Keep its effect subtle, around 8–12% if a mix control is available. It is an optional production-style approximation of reported automatic double tracking, not a claim that this device was used on the record. Bypass it if the result sounds phasey or becomes weaker in mono.
 
-  - title: "Add optional plate reverb"
+  - title: "Set up the Scenes"
     description: >-
-      Add Plate at the end of the chain.
-      Start with a decay around 2 seconds
-      and a low Mix of approximately
-      8-12 percent. The reverb should
-      support the sustained notes without
-      washing out the bends. Compare the
-      sound with the block bypassed and
-      use the smallest amount that
-      provides the required space.
-
-# SCENES
+      Use Scene A for the clean, spacious intro approximation, Scene B for the fuller first solo and Scene C for the brighter final solo. The Scene descriptions below give suggested block states and settings; set them directly on the Quad Cortex and check the levels by ear.
 
 scenes:
   - id: "A"
-    name: "Studio Outro"
+    name: "Steel Intro"
     description: >-
-      Main 1979 studio-inspired lead sound.
-      Fuzz Pi, Watt Custom Clean and
-      412 Watt S4123 active. Rotary set
-      very subtly, around 10 percent
-      mix if available. Compressor,
-      Digital Delay and Plate initially
-      bypassed. Aim for focused sustain,
-      clear note separation and
-      controlled upper mids.
+      Bypass Fuzz Pi and Doubler. Keep the amp clean; use little or no compression and bypass Rotary. Use the longer Digital Delay and Hall settings from the build steps. Play with slide and volume swells where possible. This approximates the sustained, spacious character of the original pedal steel part; it does not reproduce the ZB 10-string steel guitar itself.
 
   - id: "B"
-    name: "Spacious Outro"
+    name: "First Solo"
     description: >-
-      Keep the same fuzz, amplifier and
-      cabinet settings as Scene A.
-      Increase Rotary movement slightly,
-      towards approximately 15 percent
-      mix. Activate Digital Delay at
-      roughly 400 ms with a low mix
-      and add a small amount of Plate
-      reverb. This scene is a more
-      spacious playing alternative,
-      not a claim about a separate
-      documented 1979 studio setup.
+      Turn on Opto Comp and Fuzz Pi. Select bridge plus neck pickups if available. Use the moderate solo delay and hall settings, with Rotary slow and subtle. The slightly fuller pickup combination and sustained fuzz should support the rounded, singing tone. Doubler is optional; use it sparingly and only in stereo.
 
-# TROUBLESHOOTING
+  - id: "C"
+    name: "Final Solo"
+    description: >-
+      Keep Opto Comp and Fuzz Pi on. Select the bridge pickup for a more direct attack. Keep the amp clean underneath the fuzz, and use the same restrained Rotary and solo ambience as Scene B. Adjust the Scene level only enough to keep the final solo clearly present in the mix; do not rely on extra gain to supply the note's intensity.
 
 troubleshooting:
-  - problem: "Too fizzy?"
-    solution: >-
-      Lower the Fuzz Pi Tone or the amp
-      Presence slightly. Try moving the
-      cabinet microphone away from the
-      speaker centre before removing
-      too much treble.
+  - problem: "The fuzz sounds harsh or fizzy."
+    solution: "Lower the Fuzz Pi Tone slightly, reduce the amp Presence, or move the cabinet microphone farther towards the speaker edge."
 
-  - problem: "Not enough sustain?"
-    solution: >-
-      Raise Fuzz Pi Sustain gradually.
-      Check that the amp remains clean
-      enough for the notes to stay clear.
-      Add gentle compression only if
-      the fuzz alone is insufficient.
+  - problem: "The lead will not sustain."
+    solution: "Raise Fuzz Pi Sustain a little or increase compression modestly, then check that the amp remains loud and clean enough to support the fuzz."
 
-  - problem: "Too muddy?"
-    solution: >-
-      Reduce Bass on the amplifier
-      or use a slightly higher cabinet
-      low cut. If using humbuckers,
-      try lowering the guitar output
-      into the fuzz.
+  - problem: "The Rotary movement is too obvious."
+    solution: "Lower its mix and rate. The intended effect is subtle thickness and motion, not a pronounced wobble."
 
-  - problem: "Too much movement or wash?"
-    solution: >-
-      Reduce Rotary mix first.
-      Then lower Delay Mix or Reverb
-      Mix. The central lead sound
-      should remain strong with
-      all ambience effects bypassed.
+  - problem: "The intro repeats crowd the notes."
+    solution: "Lower Digital Delay mix or feedback first; reduce Hall mix if the sustained tail still masks the next phrase."
 
+  - problem: "The solo feels too thin."
+    solution: "For the first solo, try bridge plus neck pickups if available. Otherwise add a small amount of midrange or reduce the Fuzz Pi Tone control."
 ---

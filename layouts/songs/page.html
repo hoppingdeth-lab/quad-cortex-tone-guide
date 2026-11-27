@@ -274,24 +274,28 @@
   </section>
   {{ end }}
 
-  <!-- Beginner Route and Veteran Notes -->
-  <div class="guide-panels">
+<!-- Beginner Route and Veteran Notes -->
+<div class="guide-panels">
 
-    {{ with .Params.beginner_route }}
-    <section class="guide-panel beginner-panel">
-      <div class="panel-label">Beginner Route</div>
-      <p>{{ . }}</p>
-    </section>
-    {{ end }}
+  {{ with .Params.beginner_route }}
+  <section class="guide-panel beginner-panel">
+    <div class="panel-label">Beginner Route</div>
+    <div class="guide-panel-text">
+      {{ . | markdownify }}
+    </div>
+  </section>
+  {{ end }}
 
-    {{ with .Params.veteran_notes }}
-    <section class="guide-panel veteran-panel">
-      <div class="panel-label">Veteran Notes</div>
-      <p>{{ . }}</p>
-    </section>
-    {{ end }}
+  {{ with .Params.veteran_notes }}
+  <section class="guide-panel veteran-panel">
+    <div class="panel-label">Veteran Notes</div>
+    <div class="guide-panel-text">
+      {{ . | markdownify }}
+    </div>
+  </section>
+  {{ end }}
 
-  </div>
+</div>
 
   <!-- Before You Build -->
 {{ with .Params.before_you_build }}
